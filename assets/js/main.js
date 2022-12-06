@@ -1,9 +1,3 @@
-/**
-* Template Name: iPortfolio - v3.9.1
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function() {
   "use strict";
 
@@ -18,6 +12,16 @@
       return document.querySelector(el)
     }
   }
+
+  /* 1. define variables */
+var me = "rravelo";
+var place = "ieee.org";
+
+/* 2. find email link to replace */
+var elink = document.getElementById("mlink");
+
+/* 3. replace link href with variables  */
+elink.href = `mailto:${me}@${place}`;
 
   /**
    * Easy event listener function
@@ -125,9 +129,7 @@
     }
   });
 
-  /**
-   * Hero type effect
-   */
+ 
   const typed = select('.typed')
   if (typed) {
     let typed_strings = typed.getAttribute('data-typed-items')
