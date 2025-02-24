@@ -71,7 +71,7 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #040b14;
+  background: linear-gradient(to bottom, #c7b8ea, #7a64a5);
   overflow-y: auto;
 }
 
@@ -156,7 +156,7 @@ h6 {
 .nav-menu a:focus {
   display: flex;
   align-items: center;
-  color: #a8a9b4;
+  color: #f4f6fd;
   padding: 12px 15px;
   margin-bottom: 8px;
   transition: 0.3s;
@@ -167,14 +167,14 @@ h6 {
 .nav-menu a:focus i {
   font-size: 24px;
   padding-right: 8px;
-  color: #6f7180;
+  color: #f4f6fd;
 }
 
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
-  text-decoration: none;
+  text-decoration: double;
   color: #fff;
 }
 
@@ -232,7 +232,7 @@ section {
 }
 
 .section-bg {
-  background: #f5f8fd;
+  background: #ffffff
 }
 
 .section-title {
@@ -254,7 +254,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #149ddd;
+  background: #ffffff;
   bottom: 0;
   left: 0;
 }
@@ -780,7 +780,7 @@ section {
   bottom: 0;
   width: 300px;
   z-index: 9999;
-  background: #040b14;
+  background: #7a64a5;
 }
 
 #footer .copyright {
