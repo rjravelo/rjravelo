@@ -71,7 +71,7 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: linear-gradient(to bottom, #c7b8ea, #7a64a5);
+  background: #c7b8ea;
   overflow-y: auto;
 }
 
@@ -245,7 +245,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #173b6c;
+  color: #3f2778;
 }
 
 .section-title h2::after {
@@ -307,13 +307,13 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #050d18;
+  color: #3f2778;
 }
 
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid #1f5297;
+  border-left: 2px solid #c7b8ea;
   position: relative;
 }
 
@@ -323,13 +323,13 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  color: #3f2778;
   margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
   font-size: 16px;
-  background: #e4edf9;
+  background: #c7b8ea;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
@@ -780,7 +780,7 @@ section {
   bottom: 0;
   width: 300px;
   z-index: 9999;
-  background: #7a64a5;
+  background: #c7b8ea;
 }
 
 #footer .copyright {
