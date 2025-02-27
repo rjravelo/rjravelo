@@ -21,7 +21,10 @@ var place = "ieee.org";
 var elink = document.getElementById("mlink");
 
 /* 3. replace link href with variables  */
-elink.href = `mailto:${me}@${place}`;
+if (elink){
+  elink.href = `mailto:${me}@${place}`;
+}
+
 
   /**
    * Easy event listener function
