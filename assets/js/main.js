@@ -14,8 +14,8 @@
   }
 
   /* 1. define variables */
-var me = "rravelo";
-var place = "ieee.org";
+var me = "rjravelo99";
+var place = "gmail.com";
 
 /* 2. find email link to replace */
 var elink = document.getElementById("mlink");
