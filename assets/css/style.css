@@ -2,13 +2,36 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", serif;
   color: #272829;
 }
 
 a {
   color: #149ddd;
   text-decoration: none;
+}
+
+.lavender {
+  background: #c7b8ea;
+  background-color: #c7b8ea;
+}
+
+.dark-purple {
+  color: #3f2778
+}
+.btn-outline-primary {
+  border-color: #3f2778;
+  color: #3f2778;
+  font-weight: 700;
+}
+
+.btn-outline-primary:hover {
+  background-color: #3f2778;
+  color: #ffffff;
+}
+
+.font-color {
+  color: #c7b8ea;
 }
 
 a:hover {
@@ -22,7 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", serif;
 }
 
 /*--------------------------------------------------------------
@@ -58,6 +81,7 @@ h6 {
   opacity: 1;
 }
 
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -71,7 +95,7 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #040b14;
+  background: #c7b8ea;
   overflow-y: auto;
 }
 
@@ -89,7 +113,7 @@ h6 {
   font-weight: 600;
   -moz-text-align-last: center;
   text-align-last: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", serif;
 }
 
 #header .profile h1 a,
@@ -119,14 +143,7 @@ h6 {
   text-decoration: none;
 }
 
-#main {
-  margin-left: 300px;
-}
-
 @media (max-width: 1199px) {
-  #header {
-    left: -300px;
-  }
 
   #main {
     margin-left: 0;
@@ -136,6 +153,12 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+
+#navbar {
+  box-shadow: 0 2px 4px #c7b8ea;
+}
+
+
 /* Desktop Navigation */
 .nav-menu {
   padding: 30px 0 0 0;
@@ -156,7 +179,7 @@ h6 {
 .nav-menu a:focus {
   display: flex;
   align-items: center;
-  color: #a8a9b4;
+  color: #f4f6fd;
   padding: 12px 15px;
   margin-bottom: 8px;
   transition: 0.3s;
@@ -167,14 +190,14 @@ h6 {
 .nav-menu a:focus i {
   font-size: 24px;
   padding-right: 8px;
-  color: #6f7180;
+  color: #f4f6fd;
 }
 
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
-  text-decoration: none;
+  text-decoration: double;
   color: #fff;
 }
 
@@ -231,8 +254,17 @@ section {
   overflow: hidden;
 }
 
+.section-divider {
+  background-image: url('../img/divider-ts.png');
+  background-color: #c7b8ea ;
+  background-size: 50% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+}
+
 .section-bg {
-  background: #f5f8fd;
+  background: #ffffff
 }
 
 .section-title {
@@ -245,7 +277,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #173b6c;
+  color: #3f2778;
 }
 
 .section-title h2::after {
@@ -254,7 +286,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #149ddd;
+  /* background: #ffffff; */
   bottom: 0;
   left: 0;
 }
@@ -298,6 +330,9 @@ section {
   margin-bottom: 0;
 }
 
+.about-font-size {
+  font-size: 30px;
+}
 
 /*--------------------------------------------------------------
 # Resume
@@ -307,13 +342,13 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #050d18;
+  color: #3f2778;
 }
 
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid #1f5297;
+  border-left: 2px solid #c7b8ea;
   position: relative;
 }
 
@@ -322,14 +357,14 @@ section {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  color: #050d18;
+  font-family: "Montserrat", serif;
+  color: #3f2778;
   margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
   font-size: 16px;
-  background: #e4edf9;
+  background: #c7b8ea;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
@@ -365,6 +400,15 @@ section {
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+}
+
+.portfolio-title {
+  color: #3f2778;
+}
+
+.project-title {
+  color: #3f2778;
+  font-size: 32px;
 }
 
 .portfolio #portfolio-flters {
@@ -775,12 +819,11 @@ section {
   padding: 15px;
   color: #f4f6fd;
   font-size: 14px;
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
-  width: 300px;
-  z-index: 9999;
-  background: #040b14;
+  z-index: 0;
+  background: #c7b8ea;
 }
 
 #footer .copyright {

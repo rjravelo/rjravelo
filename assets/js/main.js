@@ -14,14 +14,17 @@
   }
 
   /* 1. define variables */
-var me = "rravelo";
-var place = "ieee.org";
+var me = "rjravelo99";
+var place = "gmail.com";
 
 /* 2. find email link to replace */
 var elink = document.getElementById("mlink");
 
 /* 3. replace link href with variables  */
-elink.href = `mailto:${me}@${place}`;
+if (elink){
+  elink.href = `mailto:${me}@${place}`;
+}
+
 
   /**
    * Easy event listener function
