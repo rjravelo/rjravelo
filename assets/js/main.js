@@ -97,11 +97,15 @@ if (elink){
   /**
    * Mobile nav toggle
    */
+  // on('click', '.mobile-nav-toggle', function(e) {
+  //   select('body').classList.toggle('mobile-nav-active')
+  //   this.classList.toggle('bi-list')
+  //   this.classList.toggle('bi-x')
+  // })
+
   on('click', '.mobile-nav-toggle', function(e) {
-    select('body').classList.toggle('mobile-nav-active')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
+    select('#navbarNav').classList.toggle('show');
+  });
 
   /**
    * Scrool with ofset on links with a class name .scrollto
