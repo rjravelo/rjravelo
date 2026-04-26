@@ -45,139 +45,107 @@
   </head>
 
   <body>
-    <main id="main">
-      <nav
-        id="navbar"
-        class="navbar sticky-top navbar-expand-lg bg-white"
-        style="height: 80px"
-      >
-        <a class="navbar-brand portfolio-title" href="#" style="font-size: 26px"
-          ><img src="assets/img/favicon.png" alt="" /> Rosemary J. Ravelo</a
-        >
+    <!-- ======= Header/Navbar ======= -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/favicon.png" alt="" width="30" height="30" class="d-inline-block align-top" />
+          Rosemary J. Ravelo
+        </a>
         <button
           class="navbar-toggler"
           type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <i class="bi bi-list"></i>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav" style="font-size: 24px">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
             <li class="nav-item">
-              <a href="#about" class="nav-link scrollto portfolio-title"
-                ><i class="bx bx-user"></i> <span>About Me</span></a
-              >
+              <a class="nav-link scrollto" href="#hero">Home</a>
             </li>
             <li class="nav-item">
-              <a href="#portfolio" class="nav-link scrollto portfolio-title"
-                ><i class="bx bx-book-content"></i> <span>Projects</span></a
-              >
+              <a class="nav-link scrollto" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a href="#resume" class="nav-link scrollto portfolio-title"
-                ><i class="bx bx-file-blank"></i> <span>Resume</span></a
-              >
+              <a class="nav-link scrollto" href="#portfolio">Projects</a>
             </li>
             <li class="nav-item">
-              <a href="#contact" class="nav-link scrollto portfolio-title"
-                ><i class="bx bx-envelope"></i> <span>Contact</span></a
-              >
+              <a class="nav-link scrollto" href="#resume">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+      <div class="hero-container" data-aos="fade-in">
+        <h1>Rosemary J. Ravelo</h1>
+        <p>Human Factors & UX Researcher</p>
+        <div class="hero-buttons">
+          <a href="#portfolio" class="btn btn-outline-primary btn-lg scrollto">View My Work</a>
+        </div>
+      </div>
+    </section>
+
+    <main id="main">
 
       <!-- ======= About Section ======= -->
-      <section id="about" class="about bg-white">
-        <div class="container">
+      <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
           <div class="section-title">
-            <h2 class="text-center">About Me</h2>
-            <div class="row">
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <a href="index.html">
-                  <img
-                    src="assets/img/profile.jpg"
-                    alt=""
-                    class="img-fluid rounded-circle w-100"
-                  />
-                </a>
-              </div>
-              <div
-                class="col-lg-9 col-md-9 col-sm-9 col-xs-9 d-flex align-items-center about-font-size"
-              >
-                <p data-aos="fade-up">
-                  Hello! I'm Rosemary. I am a human factors and user experience
-                  researcher passionate about leveraging data-driven insights to
-                  create meaningful, user-centered designs.
-                </p>
-              </div>
+            <h2>About Me</h2>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-lg-4" data-aos="fade-right">
+              <img src="assets/img/profile.jpg" class="img-fluid rounded-circle" alt="Rosemary J. Ravelo" />
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+              <p class="about-font-size">
+                Hello! I'm Rosemary. I am a human factors and user experience researcher passionate about leveraging
+                data-driven insights to create meaningful, user-centered designs. With a background in psychology and
+                ongoing PhD research in Human Factors, I bridge the gap between human behavior and technology.
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <!-- End About Section -->
-
-      <div class="bg-white text-center">
-        <img
-          src="assets/img/divider-ts.png"
-          class="lavender w-50 my-0 object-fit"
-          style="object-fit: cover; height: 100px"
-        />
-      </div>
 
       <!-- ======= Portfolio Section ======= -->
       <section id="portfolio" class="portfolio">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
           <div class="section-title">
-            <h2 class="text-center">Projects</h2>
-            <p></p>
+            <h2>Featured Projects</h2>
           </div>
-          <div class="row shadow" data-aos="fade-up">
-            <div class="col-lg-6 lavender text-white p-5">
-              <h2 class="project-title mt-4 text-white">Taino Language App</h2>
-              <h3 class="mt-4">Role: UX Researcher</h3>
-              <p class="mt-4 h4 mb-4">
-                The Taino Language App is a language learning application to
-                help users learn a modern variant of the Taino language.
-              </p>
-              <a
-                type="button"
-                class="btn btn-outline-primary btn-lg float-right"
-                href="taino-language-app.html" title="View Project"
-              >
-                View Project
-              </a>
+          <div class="row">
+            <!-- Project 1 -->
+            <div class="col-lg-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+              <div class="project-card">
+                <div class="project-img-wrapper">
+                  <img src="assets/img/portfolio/ta0.png" alt="Taino Language App" />
+                </div>
+                <div class="project-content">
+                  <h3>Taino Language App</h3>
+                  <p>
+                    A language learning application designed to help users learn a modern variant of the Taino language.
+                    Focused on accessibility and engaging user experience.
+                  </p>
+                  <a href="taino-language-app.html" class="project-link">View Case Study</a>
+                </div>
+              </div>
             </div>
-            <div class="col-lg-6 text-center align-items-center">
-              <a href="taino-language-app.html" title="View Project">
-                <img
-                  src="assets/img/portfolio/ta0.png"
-                  class="bg-white"
-                  alt=""
-                />
-              </a>
-            </div>
+            <!-- More projects can be added here -->
           </div>
-          
         </div>
-
-        <!-- </div> -->
       </section>
-      <!-- End Portfolio Section -->
-      <div class="bg-white text-center">
-        <img
-          src="assets/img/divider-ts.png"
-          class="lavender w-50 my-0 object-fit"
-          style="object-fit: cover; height: 100px"
-        />
-      </div>
       <!-- ======= Resume Section ======= -->
       <section id="resume" class="resume">
         <div class="container">
@@ -262,28 +230,27 @@
         </div>
       </section>
       <!-- End Resume Section -->
-      <div class="bg-white text-center">
-        <img
-          src="assets/img/divider-ts.png"
-          class="lavender w-50 my-0 object-fit"
-          style="object-fit: cover; height: 100px"
-        />
-      </div>
+
       <!-- ======= Contact Section ======= -->
       <section id="contact" class="contact">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
           <div class="section-title">
-            <h2 class="text-center">Contact</h2>
+            <h2>Get In Touch</h2>
           </div>
 
-          <div class="row justify-content-center" data-aos="fade-in">
-            <div class="col-lg-3 d-flex text-center align-items-stretch">
-              <div class="info">
-                <div class="email">
-                  <i class="bi bi-envelope"></i>
-                  <h4>E-mail</h4>
-                  <a href="#" id="mlink">Send Message</a>
-                </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="info-box">
+                <i class="bi bi-envelope"></i>
+                <h4>Email Me</h4>
+                <p><a href="#" id="mlink">Send Message</a></p>
+              </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="info-box">
+                <i class="bi bi-linkedin"></i>
+                <h4>LinkedIn</h4>
+                <p><a href="https://www.linkedin.com/in/rosemaryravelo/" target="_blank">View Profile</a></p>
               </div>
             </div>
           </div>
@@ -296,7 +263,13 @@
     <!-- ======= Footer ======= -->
     <footer id="footer">
       <div class="container">
-        <div></div>
+        <div class="copyright">
+          &copy; 2026 <strong><span>Rosemary J. Ravelo</span></strong>. All Rights Reserved
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/rosemaryravelo/" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="mailto:rosemary.ravelo@gmail.com"><i class="bi bi-envelope"></i></a>
+        </div>
       </div>
     </footer>
     <!-- End  Footer -->

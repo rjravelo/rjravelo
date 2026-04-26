@@ -71,11 +71,29 @@ if (elink){
    * Scrolls to an element with header offset
    */
   const scrollto = (el) => {
+    let header = select('#navbar')
+    let offset = header.offsetHeight
     let elementPos = select(el).offsetTop
     window.scrollTo({
-      top: elementPos,
+      top: elementPos - offset,
       behavior: 'smooth'
     })
+  }
+
+  /**
+   * Navbar background change on scroll
+   */
+  const navbar = select('#navbar')
+  if (navbar) {
+    const navbarScroll = () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('navbar-scrolled')
+      } else {
+        navbar.classList.remove('navbar-scrolled')
+      }
+    }
+    window.addEventListener('load', navbarScroll)
+    onscroll(document, navbarScroll)
   }
 
   /**
@@ -95,13 +113,20 @@ if (elink){
   }
 
   /**
-   * Mobile nav toggle
+   * Mobile nav toggle logic for Bootstrap 5
    */
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('body').classList.toggle('mobile-nav-active')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
+  const navbarToggler = select('.navbar-toggler')
+  const navLinks = select('.nav-link', true)
+  if (navbarToggler) {
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const navbarCollapse = select('#navbarNav')
+        if (navbarCollapse.classList.contains('show')) {
+          navbarToggler.click()
+        }
+      })
+    })
+  }
 
   /**
    * Scrool with ofset on links with a class name .scrollto
