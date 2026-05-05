@@ -13,19 +13,6 @@
     }
   }
 
-  /* 1. define variables */
-var me = "rjravelo99";
-var place = "gmail.com";
-
-/* 2. find email link to replace */
-var elink = document.getElementById("mlink");
-
-/* 3. replace link href with variables  */
-if (elink){
-  elink.href = `mailto:${me}@${place}`;
-}
-
-
   /**
    * Easy event listener function
    */
@@ -48,7 +35,7 @@ if (elink){
   }
 
   /**
-   * Navbar links active state on scroll
+   * Navbar active state on scroll
    */
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
@@ -81,22 +68,6 @@ if (elink){
   }
 
   /**
-   * Navbar background change on scroll
-   */
-  const navbar = select('#navbar')
-  if (navbar) {
-    const navbarScroll = () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('navbar-scrolled')
-      } else {
-        navbar.classList.remove('navbar-scrolled')
-      }
-    }
-    window.addEventListener('load', navbarScroll)
-    onscroll(document, navbarScroll)
-  }
-
-  /**
    * Back to top button
    */
   let backtotop = select('.back-to-top')
@@ -115,39 +86,26 @@ if (elink){
   /**
    * Mobile nav toggle logic for Bootstrap 5
    */
-  const navbarToggler = select('.navbar-toggler')
-  const navLinks = select('.nav-link', true)
-  if (navbarToggler) {
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        const navbarCollapse = select('#navbarNav')
-        if (navbarCollapse.classList.contains('show')) {
-          navbarToggler.click()
-        }
-      })
-    })
-  }
+  on('click', '.nav-link', function(e) {
+    const navbarCollapse = select('#navbarNav')
+    if (navbarCollapse.classList.contains('show')) {
+      const navbarToggler = select('.navbar-toggler')
+      navbarToggler.click()
+    }
+  }, true)
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scroll with offset on links with a class name .scrollto
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
       e.preventDefault()
-
-      let body = select('body')
-      if (body.classList.contains('mobile-nav-active')) {
-        body.classList.remove('mobile-nav-active')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
       scrollto(this.hash)
     }
   }, true)
 
   /**
-   * Scroll with ofset on page load with hash links in the url
+   * Scroll with offset on page load with hash links in the url
    */
   window.addEventListener('load', () => {
     if (window.location.hash) {
@@ -157,7 +115,9 @@ if (elink){
     }
   });
 
- 
+  /**
+   * Hero type effect
+   */
   const typed = select('.typed')
   if (typed) {
     let typed_strings = typed.getAttribute('data-typed-items')
@@ -169,23 +129,6 @@ if (elink){
       backSpeed: 50,
       backDelay: 2000
     });
-  }
-
-  /**
-   * Skills animation
-   */
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
-        });
-      }
-    })
   }
 
   /**
@@ -215,7 +158,6 @@ if (elink){
         });
       }, true);
     }
-
   });
 
   /**
@@ -243,35 +185,6 @@ if (elink){
   });
 
   /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
-    }
-  });
-
-  /**
    * Animation on scroll
    */
   window.addEventListener('load', () => {
@@ -282,10 +195,5 @@ if (elink){
       mirror: false
     })
   });
-
-  /**
-   * Initiate Pure Counter 
-   */
-  new PureCounter();
 
 })()

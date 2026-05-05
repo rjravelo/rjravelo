@@ -1,297 +1,1355 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rosemary J. Ravelo | Gaming UX Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Exo+2:wght@300;400;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cyan: #00ffcc;
+    --magenta: #ff00aa;
+    --gold: #ffd700;
+    --orange: #ff6b00;
+    --dark: #06060e;
+    --panel: #0d0d1a;
+    --panel2: #111124;
+    --border: rgba(0,255,204,0.25);
+    --border-bright: rgba(0,255,204,0.7);
+    --text: #c8e6f5;
+    --muted: #5a7a8a;
+  }
 
-    <title>Rosemary J. Ravelo Portfolio</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
-    <meta name="robots" content="noindex" />
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+  html { scroll-behavior: smooth; }
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
+  body {
+    background: var(--dark);
+    color: var(--text);
+    font-family: 'Exo 2', sans-serif;
+    overflow-x: hidden;
+    cursor: crosshair;
+  }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  /* ── SCANLINES OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.15) 2px,
+      rgba(0,0,0,0.15) 4px
+    );
+    pointer-events: none;
+    z-index: 9999;
+  }
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
-      rel="stylesheet"
-    />
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--panel); }
+  ::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 3px; }
 
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  /* ── NAVIGATION ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 0 3rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(6,6,14,0.9);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+  }
 
-    <link href="assets/css/style.css" rel="stylesheet" />
-  </head>
+  .nav-logo {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.6rem;
+    color: var(--cyan);
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-shadow: 0 0 20px var(--cyan);
+  }
 
-  <body>
-    <!-- ======= Header/Navbar ======= -->
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="assets/img/favicon.png" alt="" width="30" height="30" class="d-inline-block align-top" />
-          Rosemary J. Ravelo
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="bi bi-list"></i>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link scrollto" href="#hero">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link scrollto" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link scrollto" href="#portfolio">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link scrollto" href="#resume">Resume</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link scrollto" href="#contact">Contact</a>
-            </li>
-          </ul>
+  .nav-logo span { color: var(--magenta); }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    transition: color 0.2s, text-shadow 0.2s;
+    position: relative;
+  }
+
+  .nav-links a::before {
+    content: '▶ ';
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--cyan); text-shadow: 0 0 10px var(--cyan); }
+  .nav-links a:hover::before { opacity: 1; }
+
+  .nav-badge {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 3px 10px;
+    letter-spacing: 0.08em;
+    animation: badge-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes badge-pulse {
+    0%, 100% { border-color: var(--gold); box-shadow: 0 0 6px rgba(255,215,0,0.3); }
+    50% { border-color: rgba(255,215,0,0.5); box-shadow: 0 0 14px rgba(255,215,0,0.6); }
+  }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 56px;
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,255,204,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,255,204,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: grid-scroll 20s linear infinite;
+  }
+
+  @keyframes grid-scroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(60px); }
+  }
+
+  .hero-vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 30%, var(--dark) 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    text-align: center;
+    max-width: 900px;
+    padding: 2rem;
+  }
+
+  .hero-insert {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.55rem;
+    color: var(--magenta);
+    letter-spacing: 0.3em;
+    margin-bottom: 2rem;
+    animation: blink-text 1s step-end infinite;
+  }
+
+  @keyframes blink-text {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .hero-name {
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(1.4rem, 4vw, 2.8rem);
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 40px rgba(0,255,204,0.4);
+  }
+
+  .hero-name .cyan { color: var(--cyan); text-shadow: 0 0 30px var(--cyan); }
+  .hero-name .mag { color: var(--magenta); text-shadow: 0 0 30px var(--magenta); }
+
+  .hero-role {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.1rem;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    margin-bottom: 3rem;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    border: 1px solid var(--border);
+  }
+
+  .hero-stat {
+    background: rgba(13,13,26,0.8);
+    padding: 1.2rem 1rem;
+    text-align: center;
+    border-right: 1px solid var(--border);
+    transition: background 0.2s;
+  }
+
+  .hero-stat:last-child { border-right: none; }
+  .hero-stat:hover { background: rgba(0,255,204,0.05); }
+
+  .stat-val {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1.2rem;
+    color: var(--cyan);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .stat-lbl {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    padding: 0.9rem 2.2rem;
+    text-decoration: none;
+    cursor: crosshair;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--cyan);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s;
+    z-index: -1;
+  }
+
+  .btn:hover::before { transform: scaleX(1); }
+
+  .btn-primary {
+    color: var(--dark);
+    background: var(--cyan);
+    border: 2px solid var(--cyan);
+  }
+
+  .btn-primary::before { background: var(--magenta); }
+  .btn-primary:hover { border-color: var(--magenta); color: #fff; }
+
+  .btn-secondary {
+    color: var(--cyan);
+    border: 2px solid var(--cyan);
+    background: transparent;
+  }
+
+  .btn-secondary:hover { color: var(--dark); }
+
+  /* ── SECTION COMMON ── */
+  section { padding: 6rem 3rem; max-width: 1200px; margin: 0 auto; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .section-tag {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.5rem;
+    color: var(--magenta);
+    letter-spacing: 0.15em;
+    white-space: nowrap;
+  }
+
+  .section-title {
+    font-family: 'Exo 2', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--border-bright), transparent);
+  }
+
+  /* ── ABOUT / CHARACTER SHEET ── */
+  #about { background: none; }
+
+  .char-sheet {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 2px;
+    border: 1px solid var(--border);
+  }
+
+  .char-portrait {
+    background: var(--panel);
+    border-right: 1px solid var(--border);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .avatar-frame {
+    width: 160px;
+    height: 160px;
+    border: 2px solid var(--cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 6rem;
+    animation: avatar-glow 3s ease-in-out infinite;
+  }
+
+  @keyframes avatar-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(0,255,204,0.2), inset 0 0 20px rgba(0,255,204,0.1); }
+    50% { box-shadow: 0 0 40px rgba(0,255,204,0.5), inset 0 0 30px rgba(0,255,204,0.2); }
+  }
+
+  .avatar-frame::before, .avatar-frame::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--cyan);
+  }
+
+  .avatar-frame::before { top: -7px; left: -7px; border-right: none; border-bottom: none; }
+  .avatar-frame::after { bottom: -7px; right: -7px; border-left: none; border-top: none; }
+
+  .char-name-block { text-align: center; }
+
+  .char-name {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.7rem;
+    color: var(--cyan);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  .char-class {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+
+  .char-level {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--magenta);
+    letter-spacing: 0.1em;
+    margin-top: 0.3rem;
+  }
+
+  .attr-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .attr-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem;
+  }
+
+  .attr-key { color: var(--muted); width: 100px; flex-shrink: 0; }
+  .attr-val { color: var(--text); }
+  .attr-val.gold { color: var(--gold); }
+
+  .char-bio {
+    background: var(--panel2);
+    padding: 2.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .bio-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text);
+    font-weight: 300;
+  }
+
+  .bio-text strong { color: var(--cyan); font-weight: 700; }
+
+  .core-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .skill-bar-item { display: flex; flex-direction: column; gap: 0.5rem; }
+
+  .skill-bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+  }
+
+  .skill-bar-label span:last-child { color: var(--gold); }
+
+  .skill-track {
+    height: 8px;
+    background: rgba(255,255,255,0.05);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skill-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--cyan), var(--magenta));
+    position: relative;
+    animation: fill-grow 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+    animation-delay: var(--delay, 0s);
+  }
+
+  @keyframes fill-grow {
+    from { width: 0 !important; }
+  }
+
+  .skill-fill::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: #fff;
+    box-shadow: 0 0 8px #fff;
+  }
+
+  /* ── CASE STUDIES (QUESTS) ── */
+  #quests { background: none; max-width: 1200px; margin: 0 auto; }
+
+  .quests-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border: 1px solid var(--border);
+  }
+
+  .quest-card {
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: stretch;
+    transition: background 0.2s;
+    cursor: crosshair;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .quest-card:last-child { border-bottom: none; }
+  .quest-card:hover { background: var(--panel2); }
+
+  .quest-number {
+    padding: 2rem 2rem;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-width: 90px;
+  }
+
+  .quest-num-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.55rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+  }
+
+  .quest-num-val {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1.4rem;
+    color: var(--border-bright);
+  }
+
+  .quest-body { padding: 2rem 2.5rem; }
+
+  .quest-tags {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.8rem;
+  }
+
+  .tag {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border: 1px solid;
+  }
+
+  .tag-cyan { color: var(--cyan); border-color: rgba(0,255,204,0.4); }
+  .tag-mag { color: var(--magenta); border-color: rgba(255,0,170,0.4); }
+  .tag-gold { color: var(--gold); border-color: rgba(255,215,0,0.4); }
+  .tag-orange { color: var(--orange); border-color: rgba(255,107,0,0.4); }
+
+  .quest-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.01em;
+  }
+
+  .quest-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text);
+    font-weight: 300;
+    margin-bottom: 1.2rem;
+    max-width: 700px;
+  }
+
+  .quest-outcomes {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .outcome {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--muted);
+  }
+
+  .outcome::before {
+    content: '►';
+    color: var(--cyan);
+    font-size: 0.5rem;
+  }
+
+  .quest-meta {
+    padding: 2rem 2rem;
+    border-left: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
+    min-width: 150px;
+  }
+
+  .xp-badge {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.55rem;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    text-align: right;
+    line-height: 1.8;
+  }
+
+  .difficulty {
+    display: flex;
+    gap: 3px;
+  }
+
+  .diff-pip {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--muted);
+  }
+
+  .diff-pip.active { background: var(--magenta); border-color: var(--magenta); }
+
+  /* ── SKILLS GRID ── */
+  #skills { background: none; }
+
+  .skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    border: 1px solid var(--border);
+  }
+
+  .skill-category {
+    background: var(--panel);
+    padding: 2.5rem;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .skill-cat-title {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.55rem;
+    color: var(--cyan);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+
+  .skill-cat-sub {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+  }
+
+  .method-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .method-chip {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem;
+    padding: 5px 14px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    letter-spacing: 0.05em;
+    transition: all 0.2s;
+    cursor: crosshair;
+  }
+
+  .method-chip:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    background: rgba(0,255,204,0.05);
+  }
+
+  /* ── ACHIEVEMENTS ── */
+  #achievements { background: none; }
+
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    border: 1px solid var(--border);
+  }
+
+  .achievement {
+    background: var(--panel);
+    padding: 2rem;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    transition: background 0.2s;
+    cursor: crosshair;
+  }
+
+  .achievement:hover { background: rgba(0,255,204,0.04); }
+
+  .ach-icon {
+    font-size: 2.2rem;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    background: var(--panel2);
+  }
+
+  .ach-body {}
+
+  .ach-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.3rem;
+  }
+
+  .ach-desc {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--muted);
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+
+  .ach-rarity {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  .rarity-legendary { color: var(--gold); }
+  .rarity-epic { color: var(--magenta); }
+  .rarity-rare { color: var(--cyan); }
+
+  /* ── CONTACT TERMINAL ── */
+  #contact { background: none; }
+
+  .terminal {
+    border: 1px solid var(--border);
+    background: var(--panel);
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .terminal-titlebar {
+    background: var(--panel2);
+    border-bottom: 1px solid var(--border);
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+  }
+
+  .tb-dots { display: flex; gap: 6px; }
+  .tb-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .tb-dot-r { background: #ff5f57; }
+  .tb-dot-y { background: #febc2e; }
+  .tb-dot-g { background: #28c840; }
+
+  .terminal-body { padding: 2rem 2.5rem; }
+
+  .term-line {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.85rem;
+    line-height: 2;
+    margin-bottom: 0.3rem;
+  }
+
+  .term-prompt { color: var(--cyan); }
+  .term-cmd { color: #fff; }
+  .term-output { color: var(--text); padding-left: 1.5rem; }
+  .term-output.gold { color: var(--gold); }
+  .term-output.mag { color: var(--magenta); }
+  .term-output a { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; }
+  .term-output a:hover { opacity: 0.7; }
+
+  .term-cursor {
+    display: inline-block;
+    width: 0.6em;
+    height: 1em;
+    background: var(--cyan);
+    vertical-align: text-bottom;
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+  .contact-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: crosshair;
+  }
+
+  .contact-link:hover { border-color: var(--cyan); background: rgba(0,255,204,0.04); }
+
+  .cl-icon { font-size: 1.6rem; }
+
+  .cl-body {}
+
+  .cl-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.2rem;
+  }
+
+  .cl-val {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 3rem;
+    border-top: 1px solid var(--border);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+  }
+
+  footer span { color: var(--cyan); }
+
+  /* ── DECORATIVE CORNER BRACKETS ── */
+  .bracket-box {
+    position: relative;
+  }
+
+  .bracket-box::before,
+  .bracket-box::after,
+  .bracket-box > *:first-child::before,
+  .bracket-box > *:first-child::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+  }
+
+  /* ── PARALLAX PIXEL PARTICLES ── */
+  .pixel-bg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .pixel {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--cyan);
+    opacity: 0;
+    animation: float-pixel linear infinite;
+  }
+
+  @keyframes float-pixel {
+    0% { transform: translateY(100vh); opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.3; }
+    100% { transform: translateY(-10px); opacity: 0; }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 0 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 4rem 1.5rem; }
+    .char-sheet { grid-template-columns: 1fr; }
+    .char-portrait { border-right: none; border-bottom: 1px solid var(--border); }
+    .core-skills { grid-template-columns: 1fr; }
+    .quest-card { grid-template-columns: 1fr; }
+    .quest-number { flex-direction: row; border-right: none; border-bottom: 1px solid var(--border); }
+    .quest-meta { border-left: none; border-top: 1px solid var(--border); align-items: flex-start; }
+    .skills-container { grid-template-columns: 1fr; }
+    .achievements-grid { grid-template-columns: 1fr; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); }
+    .contact-links { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Pixel particles -->
+<div class="pixel-bg" id="pixels"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">ROSEMARY<span>.</span>RAVELO</a>
+  <ul class="nav-links">
+    <li><a href="#about">CHARACTER</a></li>
+    <li><a href="#quests">QUESTS</a></li>
+    <li><a href="#skills">SKILLS</a></li>
+    <li><a href="#achievements">ACHIEVEMENTS</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+  <div class="nav-badge">AVAILABLE FOR HIRE</div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" style="max-width:100%; padding:0;">
+  <div class="hero-grid"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-content">
+    <div class="hero-insert">▶ INSERT COIN TO PLAY ◀</div>
+    <h1 class="hero-name">
+      <span class="cyan">GAMING UX</span><br>
+      RESEARCHER<br>
+      <span class="mag">LEVEL 30</span>
+    </h1>
+    <p class="hero-role">// DR. ROSEMARY J. RAVELO · HUMAN FACTORS</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="stat-val">8+</span>
+        <span class="stat-lbl">YRS EXP</span>
+      </div>
+      <div class="hero-stat">
+        <span class="stat-val">12+</span>
+        <span class="stat-lbl">PROJECTS</span>
+      </div>
+      <div class="hero-stat">
+        <span class="stat-val">3</span>
+        <span class="stat-lbl">DEGREES</span>
+      </div>
+      <div class="hero-stat">
+        <span class="stat-val">100%</span>
+        <span class="stat-lbl">PASSION</span>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a href="#quests" class="btn btn-primary">VIEW QUEST LOG</a>
+      <a href="#contact" class="btn btn-secondary">SEND MESSAGE</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / CHARACTER SHEET -->
+<section id="about" style="max-width:1200px; margin:0 auto; padding: 6rem 3rem;">
+  <div class="section-header">
+    <div class="section-tag">// CHARACTER_SHEET.EXE</div>
+    <h2 class="section-title">ABOUT</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="char-sheet">
+    <div class="char-portrait">
+      <div class="avatar-frame">🎮</div>
+      <div class="char-name-block">
+        <div class="char-name">DR. ROSEMARY J. RAVELO</div>
+        <div class="char-class">GAMING UX RESEARCHER</div>
+        <div class="char-level">LVL 30 · 30,000 XP</div>
+      </div>
+      <div class="attr-list">
+        <div class="attr-row"><span class="attr-key">LOCATION</span><span class="attr-val">Remote / Maryland</span></div>
+        <div class="attr-row"><span class="attr-key">STUDIO</span><span class="attr-val gold">Tech Fleet</span></div>
+        <div class="attr-row"><span class="attr-key">SPEC</span><span class="attr-val">Human Factors</span></div>
+        <div class="attr-row"><span class="attr-key">PLATFORM</span><span class="attr-val">PC · Console · Mobile</span></div>
+        <div class="attr-row"><span class="attr-key">PREV GUILDS</span><span class="attr-val">Lifetime Counseling</span></div>
+        <div class="attr-row"><span class="attr-key">STATUS</span><span class="attr-val gold">OPEN TO OFFERS</span></div>
+      </div>
+    </div>
+    <div class="char-bio">
+      <p class="bio-text">
+        I am a human factors and user experience researcher passionate about leveraging <strong>data-driven insights</strong> to create meaningful, player-centered experiences. With a PhD in Human Factors completed in May 2026, I specialize in <strong>bridging the gap</strong> between player behavior and game design mechanics.
+      </p>
+      <p class="bio-text">
+        I specialize in <strong>optimizing player immersion</strong>, analyzing game flow, and enhancing player synergy. My approach combines rigorous behavioral analysis with a deep understanding of cognitive patterns to deliver actionable insights that elevate the gaming experience.
+      </p>
+      <div class="core-skills">
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>USABILITY TESTING</span><span>95</span></div>
+          <div class="skill-track"><div class="skill-fill" style="width:95%; --delay:0.1s"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>PLAYTESTING</span><span>90</span></div>
+          <div class="skill-track"><div class="skill-fill" style="width:90%; --delay:0.2s"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>HEURISTICS</span><span>85</span></div>
+          <div class="skill-track"><div class="skill-fill" style="width:85%; --delay:0.3s"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>QUAL RESEARCH</span><span>92</span></div>
+          <div class="skill-track"><div class="skill-fill" style="width:92%; --delay:0.4s"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>DATA ANALYSIS</span><span>85</span></div>
+          <div class="skill-track"><div class="skill-fill" style="width:85%; --delay:0.5s"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>FIGMA</span><span>88</span></div>
+          <div class="skill-track"><div class="skill-fill" style="width:88%; --delay:0.6s"></div></div>
         </div>
       </div>
-    </nav>
+    </div>
+  </div>
+</section>
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-      <div class="hero-container" data-aos="fade-in">
-        <h1>Rosemary J. Ravelo</h1>
-        <p>Human Factors & UX Researcher</p>
-        <div class="hero-buttons">
-          <a href="#portfolio" class="btn btn-outline-primary btn-lg scrollto">View My Work</a>
+<!-- QUESTS / CASE STUDIES -->
+<section id="quests" style="max-width:1200px; margin:0 auto; padding:6rem 3rem;">
+  <div class="section-header">
+    <div class="section-tag">// ACTIVE_QUESTS.LOG</div>
+    <h2 class="section-title">QUEST LOG</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="quests-grid">
+
+    <a class="quest-card" href="taino-language-app.html">
+      <div class="quest-number">
+        <span class="quest-num-label">QUEST</span>
+        <span class="quest-num-val">01</span>
+      </div>
+      <div class="quest-body">
+        <div class="quest-tags">
+          <span class="tag tag-mag">ACCESSIBILITY</span>
+          <span class="tag tag-gold">TECH FLEET</span>
+        </div>
+        <h3 class="quest-title">Taino Language App</h3>
+        <p class="quest-desc">A language learning application designed to help users learn a modern variant of the Taino language. Focused on accessibility and gamified player progression. Guided research cycles for emerging platforms and language tools.</p>
+        <div class="quest-outcomes">
+          <span class="outcome">Gamified Progression</span>
+          <span class="outcome">Accessibility Focused</span>
+          <span class="outcome">Campaign Viewable</span>
         </div>
       </div>
-    </section>
-
-    <main id="main">
-
-      <!-- ======= About Section ======= -->
-      <section id="about" class="about">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>About Me</h2>
-          </div>
-          <div class="row align-items-center">
-            <div class="col-lg-4" data-aos="fade-right">
-              <img src="assets/img/profile.jpg" class="img-fluid rounded-circle" alt="Rosemary J. Ravelo" />
-            </div>
-            <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-              <p class="about-font-size">
-                Hello! I'm Rosemary. I am a human factors and user experience researcher passionate about leveraging
-                data-driven insights to create meaningful, user-centered designs. With a background in psychology and
-                ongoing PhD research in Human Factors, I bridge the gap between human behavior and technology.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ======= Portfolio Section ======= -->
-      <section id="portfolio" class="portfolio">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Featured Projects</h2>
-          </div>
-          <div class="row">
-            <!-- Project 1 -->
-            <div class="col-lg-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
-              <div class="project-card">
-                <div class="project-img-wrapper">
-                  <img src="assets/img/portfolio/ta0.png" alt="Taino Language App" />
-                </div>
-                <div class="project-content">
-                  <h3>Taino Language App</h3>
-                  <p>
-                    A language learning application designed to help users learn a modern variant of the Taino language.
-                    Focused on accessibility and engaging user experience.
-                  </p>
-                  <a href="taino-language-app.html" class="project-link">View Case Study</a>
-                </div>
-              </div>
-            </div>
-            <!-- More projects can be added here -->
-          </div>
-        </div>
-      </section>
-      <!-- ======= Resume Section ======= -->
-      <section id="resume" class="resume">
-        <div class="container">
-          <div class="section-title">
-            <h2 class="text-center">Resume</h2>
-          </div>
-
-          <div class="row mx-auto">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="resume-title text-center">Professional Experience</h3>
-              <div class="resume-item">
-                <h4>UX Research Apprentice</h4>
-                <h5>Aug. 2024 - Jan. 2025</h5>
-                <p><em>Tech Fleet, Remote, WV</em></p>
-          
-              </div>
-              <div class="resume-item">
-                <h4>Graduate Researcher - Human Factors</h4>
-                <h5>Aug. 2020 - Present</h5>
-                <p><em>Capitol Technology University, Laurel, MD</em></p>
-              </div>
-              <div class="resume-item">
-                <h4>Mental Health Therapist</h4>
-                <h5>Sep. 2018 - Feb. 2020</h5>
-                <p><em>Lifetime Counseling Center, Cocoa, FL</em></p>
-              </div>
-              <div class="resume-item">
-                <h4>Behavior Therapist</h4>
-                <h5>Jan. 2017 - Sep. 2018</h5>
-                <p><em>Florida Autism Center, Viera, FL</em></p>
-              </div>
-              <div class="resume-item">
-                <h4>Behavior Therapist</h4>
-                <h5>Jan. 2015 - Jan. 2017</h5>
-                <p><em>Florida Institute of Technology, Cocoa, FL</em></p>
-              </div>
-            </div>
-            <div class="col-lg-4" data-aos="fade-up">
-              <h3 class="resume-title text-center">Skills Summary</h3>
-              <div class="resume-item pb-0">
-                <ul>
-                  <li>Usability Testing</li>
-                  <li>Human Performance</li>
-                  <li>Task Analysis</li>
-                  <li>Journey Mapping</li>
-                  <li>User Personas</li>
-                  <li>Situational Awareness</li>
-                  <li>User Interviews</li>
-                  <li>Surveys</li>
-                  <li>Behavior Analysis</li>
-                  <li>Playtesting</li>
-                  <li>Heuristic Evaluations</li>
-                  <li>Ethnographic Evaluations</li>
-                  <li>Quantitative Research</li>
-                  <li>Qualitative Research</li>
-                  <li>Mixed Methods</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-4" data-aos="fade-up">
-              <h3 class="resume-title text-center">Education</h3>
-              <div class="resume-item">
-                <h4>PhD Human Factors</h4>
-                <h5>2020 - Present</h5>
-                <p><em>Capitol Technology University, Laurel, MD</em></p>
-              </div>
-              <div class="resume-item">
-                <h4>MS Psychology</h4>
-                <h5>2015 - 2017</h5>
-                <p>
-                  <em>Nova Southeastern University, Fort Lauderdale, FL</em>
-                </p>
-              </div>
-              <div class="resume-item">
-                <h4>BA Applied Psychology</h4>
-                <h5>2012 - 2014</h5>
-                <p><em>Florida Institute of Technology, Melbourne, FL</em></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Resume Section -->
-
-      <!-- ======= Contact Section ======= -->
-      <section id="contact" class="contact">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Get In Touch</h2>
-          </div>
-
-          <div class="row justify-content-center">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="info-box">
-                <i class="bi bi-envelope"></i>
-                <h4>Email Me</h4>
-                <p><a href="#" id="mlink">Send Message</a></p>
-              </div>
-            </div>
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div class="info-box">
-                <i class="bi bi-linkedin"></i>
-                <h4>LinkedIn</h4>
-                <p><a href="https://www.linkedin.com/in/rosemaryravelo/" target="_blank">View Profile</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Contact Section -->
-    </main>
-    <!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-      <div class="container">
-        <div class="copyright">
-          &copy; 2026 <strong><span>Rosemary J. Ravelo</span></strong>. All Rights Reserved
-        </div>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/rosemaryravelo/" target="_blank"><i class="bi bi-linkedin"></i></a>
-          <a href="mailto:rosemary.ravelo@gmail.com"><i class="bi bi-envelope"></i></a>
+      <div class="quest-meta">
+        <div class="xp-badge">+8,400 XP<br>COMPLETED</div>
+        <div class="difficulty">
+          <div class="diff-pip active"></div>
+          <div class="diff-pip active"></div>
+          <div class="diff-pip active"></div>
+          <div class="diff-pip active"></div>
+          <div class="diff-pip"></div>
         </div>
       </div>
-    </footer>
-    <!-- End  Footer -->
+    </a>
 
-    <a
-      href="#"
-      class="back-to-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
+    <div class="quest-card">
+      <div class="quest-number">
+        <span class="quest-num-label">QUEST</span>
+        <span class="quest-num-val">02</span>
+      </div>
+      <div class="quest-body">
+        <div class="quest-tags">
+          <span class="tag tag-cyan">AUTOMATION</span>
+          <span class="tag tag-orange">HUMAN FACTORS</span>
+        </div>
+        <h3 class="quest-title">Graduate Research Node</h3>
+        <p class="quest-desc">Human Factors research focusing on automation and operator performance at Capitol Technology University. Analyzing complex system interactions and user cognitive load. Completed May 2026.</p>
+        <div class="quest-outcomes">
+          <span class="outcome">Automation Focus</span>
+          <span class="outcome">Performance Metrics</span>
+          <span class="outcome">PhD Thesis Finalized</span>
+        </div>
+      </div>
+      <div class="quest-meta">
+        <div class="xp-badge">+12,000 XP<br>COMPLETED</div>
+        <div class="difficulty">
+          <div class="diff-pip active"></div>
+          <div class="diff-pip active"></div>
+          <div class="diff-pip active"></div>
+          <div class="diff-pip active"></div>
+          <div class="diff-pip active"></div>
+        </div>
+      </div>
+    </div>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/typed.js/typed.min.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
+  </div>
+</section>
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-  </body>
+<!-- SKILLS GRID -->
+<section id="skills" style="max-width:1200px; margin:0 auto; padding:6rem 3rem;">
+  <div class="section-header">
+    <div class="section-tag">// SKILLSET_MANIFEST</div>
+    <h2 class="section-title">SKILLS</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="skills-container">
+    <div class="skill-category">
+      <div class="skill-cat-title">RESEARCH METHODS</div>
+      <div class="skill-cat-sub">Qualitative & Mixed-Methods</div>
+      <div class="method-chips">
+        <span class="method-chip">Usability Testing</span>
+        <span class="method-chip">Task Analysis</span>
+        <span class="method-chip">Journey Mapping</span>
+        <span class="method-chip">User Personas</span>
+        <span class="method-chip">Playtesting</span>
+        <span class="method-chip">User Interviewing</span>
+        <span class="method-chip">Heuristic Evaluation</span>
+        <span class="method-chip">Flow Analysis</span>
+      </div>
+    </div>
+    <div class="skill-category" style="border-right:none;">
+      <div class="skill-cat-title">QUANTITATIVE</div>
+      <div class="skill-cat-sub">Data & Analytics</div>
+      <div class="method-chips">
+        <span class="method-chip">Data Analysis</span>
+        <span class="method-chip">R / Python</span>
+        <span class="method-chip">Qualtrics / Surveys</span>
+        <span class="method-chip">Behavioral Analysis</span>
+        <span class="method-chip">Cognitive Patterns</span>
+        <span class="method-chip">Statistical Insights</span>
+      </div>
+    </div>
+    <div class="skill-category" style="border-bottom:none;">
+      <div class="skill-cat-title">GAME-SPECIFIC</div>
+      <div class="skill-cat-sub">Domain Expertise</div>
+      <div class="method-chips">
+        <span class="method-chip">Player Immersion</span>
+        <span class="method-chip">Game Flow Analysis</span>
+        <span class="method-chip">Player Synergy</span>
+        <span class="method-chip">Mechanic Integration</span>
+        <span class="method-chip">Gamified Progression</span>
+        <span class="method-chip">Human Factors</span>
+      </div>
+    </div>
+    <div class="skill-category" style="border-right:none; border-bottom:none;">
+      <div class="skill-cat-title">TOOLS & PLATFORMS</div>
+      <div class="skill-cat-sub">Software & Mastery</div>
+      <div class="method-chips">
+        <span class="method-chip">Figma</span>
+        <span class="method-chip">Unity</span>
+        <span class="method-chip">R</span>
+        <span class="method-chip">Python</span>
+        <span class="method-chip">Qualtrics</span>
+        <span class="method-chip">Surveys</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" style="max-width:1200px; margin:0 auto; padding:6rem 3rem;">
+  <div class="section-header">
+    <div class="section-tag">// ACHIEVEMENTS_UNLOCKED</div>
+    <h2 class="section-title">TECH TREE</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="achievements-grid">
+    <div class="achievement">
+      <div class="ach-icon">🎓</div>
+      <div class="ach-body">
+        <div class="ach-title">PhD Human Factors</div>
+        <div class="ach-desc">Doctor of Philosophy — Capitol Technology University, Laurel, MD (Completed May 2026)</div>
+        <div class="ach-rarity rarity-legendary">★ LEGENDARY</div>
+      </div>
+    </div>
+    <div class="achievement">
+      <div class="ach-icon">📖</div>
+      <div class="ach-body">
+        <div class="ach-title">MS Psychology</div>
+        <div class="ach-desc">Graduate Degree in Psychology — Focus on behavioral and cognitive patterns.</div>
+        <div class="ach-rarity rarity-epic">◆ EPIC</div>
+      </div>
+    </div>
+    <div class="achievement">
+      <div class="ach-icon">🛠️</div>
+      <div class="ach-body">
+        <div class="ach-title">UX Research Apprentice</div>
+        <div class="ach-desc">Tech Fleet (2024-2025) — Guided research cycles for emerging platforms.</div>
+        <div class="ach-rarity rarity-epic">◆ EPIC</div>
+      </div>
+    </div>
+    <div class="achievement">
+      <div class="ach-icon">🧠</div>
+      <div class="ach-body">
+        <div class="ach-title">Mental Health Therapist</div>
+        <div class="ach-desc">Lifetime Counseling Center (2018-2020) — Clinical behavioral analysis.</div>
+        <div class="ach-rarity rarity-rare">● RARE</div>
+      </div>
+    </div>
+    <div class="achievement">
+      <div class="ach-icon">🚀</div>
+      <div class="ach-body">
+        <div class="ach-title">Quest Starter</div>
+        <div class="ach-desc">Taino Language App — Successfully launched gamified accessibility research.</div>
+        <div class="ach-rarity rarity-epic">◆ EPIC</div>
+      </div>
+    </div>
+    <div class="achievement">
+      <div class="ach-icon">🤝</div>
+      <div class="ach-body">
+        <div class="ach-title">Player Centric</div>
+        <div class="ach-desc">Dedicated to bridging player behavior and game design mechanics.</div>
+        <div class="ach-rarity rarity-legendary">★ LEGENDARY</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT TERMINAL -->
+<section id="contact" style="max-width:1200px; margin:0 auto; padding:6rem 3rem;">
+  <div class="section-header">
+    <div class="section-tag">// OPEN_COMMS.SH</div>
+    <h2 class="section-title">COMM-LINK</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="terminal">
+    <div class="terminal-titlebar">
+      <div class="tb-dots">
+        <div class="tb-dot tb-dot-r"></div>
+        <div class="tb-dot tb-dot-y"></div>
+        <div class="tb-dot tb-dot-g"></div>
+      </div>
+      <span>rosemary.ravelo@gmail.com — zsh — 80×24</span>
+    </div>
+    <div class="terminal-body">
+      <div class="term-line"><span class="term-prompt">rosemary@portfolio:~$ </span><span class="term-cmd">whoami --verbose</span></div>
+      <div class="term-line term-output gold">Rosemary J. Ravelo · Gaming UX Researcher</div>
+      <div class="term-line term-output">Level 28 UX Researcher specializing in Human Factors.</div>
+      <br>
+      <div class="term-line"><span class="term-prompt">rosemary@portfolio:~$ </span><span class="term-cmd">cat availability.txt</span></div>
+      <div class="term-line term-output">STATUS: OPEN TO OFFERS</div>
+      <div class="term-line term-output">PREFERENCE: Gaming UX, Human Factors, Remote/Hybrid</div>
+      <div class="term-line term-output">NOTICE: Standard (negotiable)</div>
+      <br>
+      <div class="term-line"><span class="term-prompt">rosemary@portfolio:~$ </span><span class="term-cmd">send_message --to rosemary<span class="term-cursor"></span></span></div>
+    </div>
+
+    <div class="contact-links" style="margin:0; border-top: 1px solid var(--border); padding:0;">
+      <a class="contact-link" href="mailto:rosemary.ravelo@gmail.com">
+        <div class="cl-icon">📧</div>
+        <div class="cl-body">
+          <div class="cl-label">EMAIL</div>
+          <div class="cl-val">rosemary.ravelo@gmail.com</div>
+        </div>
+      </a>
+      <a class="contact-link" href="https://www.linkedin.com/in/rosemaryravelo/" target="_blank">
+        <div class="cl-icon">💼</div>
+        <div class="cl-body">
+          <div class="cl-label">LINKEDIN</div>
+          <div class="cl-val">/in/rosemaryravelo</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 DR. ROSEMARY J. RAVELO · <span>UX & GAMES RESEARCHER</span> · ALL RIGHTS RESERVED</p>
+  <p style="margin-top:0.8rem; font-size:0.55rem;">BUILT WITH: HTML · CSS · PASSION FOR USER EXPERIENCE · NO FRAMEWORKS HARMED</p>
+</footer>
+
+<script>
+  // Pixel particle system
+  const pixelBg = document.getElementById('pixels');
+  const PIXEL_COUNT = 60;
+
+  for (let i = 0; i < PIXEL_COUNT; i++) {
+    const p = document.createElement('div');
+    p.className = 'pixel';
+    p.style.left = Math.random() * 100 + 'vw';
+    p.style.animationDuration = (6 + Math.random() * 14) + 's';
+    p.style.animationDelay = (Math.random() * 10) + 's';
+    const hue = Math.random() > 0.6 ? 'var(--magenta)' : Math.random() > 0.5 ? 'var(--gold)' : 'var(--cyan)';
+    p.style.background = hue;
+    p.style.width = (Math.random() > 0.7 ? 4 : 2) + 'px';
+    p.style.height = p.style.width;
+    pixelBg.appendChild(p);
+  }
+
+  // Glitch effect on hero name — random interval
+  const heroName = document.querySelector('.hero-name');
+  function glitch() {
+    heroName.style.transform = `translate(${(Math.random()-0.5)*4}px, ${(Math.random()-0.5)*2}px)`;
+    heroName.style.filter = `hue-rotate(${Math.random()*40}deg)`;
+    setTimeout(() => {
+      heroName.style.transform = '';
+      heroName.style.filter = '';
+    }, 80);
+  }
+
+  setInterval(glitch, 3000 + Math.random() * 4000);
+
+  // Animate stats count-up
+  function animateCounter(el, target, suffix='') {
+    const dur = 1500;
+    const start = performance.now();
+    const isPlus = target.toString().includes('+');
+    const isPercent = target.toString().includes('%');
+    const num = parseInt(target);
+    const formatted = target;
+
+    function step(now) {
+      const progress = Math.min((now - start) / dur, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(ease * num);
+      let display = current;
+      if (isPlus) display += '+';
+      if (isPercent) display += '%';
+      el.textContent = progress < 1 ? display : formatted;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  const statVals = document.querySelectorAll('.stat-val');
+  const targets = ['7+', '10+', '3', '100%'];
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        statVals.forEach((el, i) => {
+          setTimeout(() => animateCounter(el, targets[i]), i * 150);
+        });
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.5 });
+
+  if (statVals.length) observer.observe(statVals[0]);
+
+  // Active nav link
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--cyan)' : '';
+    });
+  }, { passive: true });
+</script>
+</body>
+</html>
+});
+</script>
+</body>
 </html>
