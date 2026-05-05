@@ -1,325 +1,457 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rosemary J. Ravelo | UX Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Exo+2:wght@300;400;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
 
-    <title>Rosemary J. Ravelo Portfolio</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
-    <meta name="robots" content="noindex" />
+<!-- Pixel particles -->
+<div class="pixel-bg" id="pixels"></div>
 
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">ROSEMARY J. RAVELO</a>
+  <ul class="nav-links">
+    <li><a href="#about">CHARACTER</a></li>
+    <li><a href="#quests">QUESTS</a></li>
+    <li><a href="#skills">SKILLS</a></li>
+    <li><a href="#achievements">ACHIEVEMENTS</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+  <div class="nav-badge">AVAILABLE FOR HIRE</div>
+</nav>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
-      rel="stylesheet"
-    />
-
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-
-    <link href="assets/css/style.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-    <main id="main">
-      <nav
-        id="navbar"
-        class="navbar sticky-top navbar-expand-lg bg-white"
-        style="height: 80px"
-      >
-        <a class="navbar-brand portfolio-title" href="#" style="font-size: 26px"
-          ><img src="assets/img/favicon.png" alt="" /> Rosemary J. Ravelo</a
-        >
-        <button
-          class="navbar-toggler mobile-nav-toggle"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end bg-white"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav" style="font-size: 24px">
-            <li class="nav-item">
-              <a href="#about" class="nav-link scrollto portfolio-title"
-                ><i class="bx bx-user"></i> <span>About Me</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="#portfolio" class="nav-link scrollto portfolio-title"
-                ><i class="bx bx-book-content"></i> <span>Projects</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="#resume" class="nav-link scrollto portfolio-title"
-                ><i class="bx bx-file-blank"></i> <span>Resume</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link scrollto portfolio-title"
-                ><i class="bx bx-envelope"></i> <span>Contact</span></a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <!-- ======= About Section ======= -->
-      <section id="about" class="about bg-white">
-        <div class="container">
-          <div class="section-title">
-            <h2 class="text-center">About Me</h2>
-            <div class="row">
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <a href="index.html">
-                  <img
-                    src="assets/img/profile.jpg"
-                    alt=""
-                    class="img-fluid rounded-circle w-100"
-                  />
-                </a>
-              </div>
-              <div
-                class="col-lg-9 col-md-9 col-sm-9 col-xs-9 d-flex align-items-center about-font-size"
-              >
-                <p data-aos="fade-up">
-                  Hello! I'm Rosemary. I am a human factors and user experience
-                  researcher passionate about leveraging data-driven insights to
-                  create meaningful, user-centered designs.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End About Section -->
-
-      <div class="bg-white text-center">
-        <img
-          src="assets/img/divider-ts.png"
-          class="lavender w-50 my-0 object-fit"
-          style="object-fit: cover; height: 100px"
-        />
+<!-- HERO -->
+<section id="hero" style="max-width:100%; padding:0;">
+  <div class="hero-grid"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-content">
+    <div class="hero-insert">▶ INSERT COIN TO PLAY ◀</div>
+    <h1 class="hero-name">
+      <span class="cyan">UX</span><br>
+      RESEARCHER<br>
+      <span class="mag">LEVEL 30</span>
+    </h1>
+    <p class="hero-role">// ROSEMARY J. RAVELO · HUMAN FACTORS</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="stat-val">10+</span>
+        <span class="stat-lbl">YRS EXP</span>
       </div>
-
-      <!-- ======= Portfolio Section ======= -->
-      <section id="portfolio" class="portfolio">
-        <div class="container">
-          <div class="section-title">
-            <h2 class="text-center">Projects</h2>
-            <p></p>
-          </div>
-          <div class="row shadow" data-aos="fade-up">
-            <div class="col-lg-6 lavender text-white p-5">
-              <h2 class="project-title mt-4 text-white">Taino Language App</h2>
-              <h3 class="mt-4">Role: UX Researcher</h3>
-              <p class="mt-4 h4 mb-4">
-                The Taino Language App is a language learning application to
-                help users learn a modern variant of the Taino language.
-              </p>
-              <a
-                type="button"
-                class="btn btn-outline-primary btn-lg float-right"
-                href="taino-language-app.html" title="View Project"
-              >
-                View Project
-              </a>
-            </div>
-            <div class="col-lg-6 text-center align-items-center">
-              <a href="taino-language-app.html" title="View Project">
-                <img
-                  src="assets/img/portfolio/ta0.png"
-                  class="bg-white"
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
-          
-        </div>
-
-        <!-- </div> -->
-      </section>
-      <!-- End Portfolio Section -->
-      <div class="bg-white text-center">
-        <img
-          src="assets/img/divider-ts.png"
-          class="lavender w-50 my-0 object-fit"
-          style="object-fit: cover; height: 100px"
-        />
+      <div class="hero-stat">
+        <span class="stat-val">2+</span>
+        <span class="stat-lbl">PROJECTS</span>
       </div>
-      <!-- ======= Resume Section ======= -->
-      <section id="resume" class="resume">
-        <div class="container">
-          <div class="section-title">
-            <h2 class="text-center">Resume</h2>
-          </div>
-
-          <div class="row mx-auto">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="resume-title text-center">Professional Experience</h3>
-              <div class="resume-item">
-                <h4>UX Research Apprentice</h4>
-                <h5>Aug. 2024 - Jan. 2025</h5>
-                <p><em>Tech Fleet, Remote, WV</em></p>
-          
-              </div>
-              <div class="resume-item">
-                <h4>Graduate Researcher - Human Factors</h4>
-                <h5>Aug. 2020 - Present</h5>
-                <p><em>Capitol Technology University, Laurel, MD</em></p>
-              </div>
-              <div class="resume-item">
-                <h4>Mental Health Therapist</h4>
-                <h5>Sep. 2018 - Feb. 2020</h5>
-                <p><em>Lifetime Counseling Center, Cocoa, FL</em></p>
-              </div>
-              <div class="resume-item">
-                <h4>Behavior Therapist</h4>
-                <h5>Jan. 2017 - Sep. 2018</h5>
-                <p><em>Florida Autism Center, Viera, FL</em></p>
-              </div>
-              <div class="resume-item">
-                <h4>Behavior Therapist</h4>
-                <h5>Jan. 2015 - Jan. 2017</h5>
-                <p><em>Florida Institute of Technology, Cocoa, FL</em></p>
-              </div>
-            </div>
-            <div class="col-lg-4" data-aos="fade-up">
-              <h3 class="resume-title text-center">Skills Summary</h3>
-              <div class="resume-item pb-0">
-                <ul>
-                  <li>Usability Testing</li>
-                  <li>Human Performance</li>
-                  <li>Task Analysis</li>
-                  <li>Journey Mapping</li>
-                  <li>User Personas</li>
-                  <li>Situational Awareness</li>
-                  <li>User Interviews</li>
-                  <li>Surveys</li>
-                  <li>Behavior Analysis</li>
-                  <li>Playtesting</li>
-                  <li>Heuristic Evaluations</li>
-                  <li>Ethnographic Evaluations</li>
-                  <li>Quantitative Research</li>
-                  <li>Qualitative Research</li>
-                  <li>Mixed Methods</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-4" data-aos="fade-up">
-              <h3 class="resume-title text-center">Education</h3>
-              <div class="resume-item">
-                <h4>PhD Human Factors</h4>
-                <h5>2020 - Present</h5>
-                <p><em>Capitol Technology University, Laurel, MD</em></p>
-              </div>
-              <div class="resume-item">
-                <h4>MS Psychology</h4>
-                <h5>2015 - 2017</h5>
-                <p>
-                  <em>Nova Southeastern University, Fort Lauderdale, FL</em>
-                </p>
-              </div>
-              <div class="resume-item">
-                <h4>BA Applied Psychology</h4>
-                <h5>2012 - 2014</h5>
-                <p><em>Florida Institute of Technology, Melbourne, FL</em></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Resume Section -->
-      <div class="bg-white text-center">
-        <img
-          src="assets/img/divider-ts.png"
-          class="lavender w-50 my-0 object-fit"
-          style="object-fit: cover; height: 100px"
-        />
+      <div class="hero-stat">
+        <span class="stat-val">100%</span>
+        <span class="stat-lbl">PASSION</span>
       </div>
-      <!-- ======= Contact Section ======= -->
-      <section id="contact" class="contact">
-        <div class="container">
-          <div class="section-title">
-            <h2 class="text-center">Contact</h2>
-          </div>
+    </div>
+    <div class="hero-cta">
+      <a href="#quests" class="btn btn-primary">VIEW QUEST LOG</a>
+      <a href="#contact" class="btn btn-secondary">SEND MESSAGE</a>
+    </div>
+  </div>
+</section>
 
-          <div class="row justify-content-center" data-aos="fade-in">
-            <div class="col-lg-3 d-flex text-center align-items-stretch">
-              <div class="info">
-                <div class="email">
-                  <i class="bi bi-envelope"></i>
-                  <h4>E-mail</h4>
-                  <a href="#" id="mlink">Send Message</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Contact Section -->
-    </main>
-    <!-- End #main -->
+<!-- ABOUT / CHARACTER SHEET -->
+<section id="about" style="max-width:1200px; margin:0 auto; padding: 6rem 3rem;">
+  <div class="section-header">
+    <div class="section-tag">// CHARACTER_SHEET.EXE</div>
+    <h2 class="section-title">ABOUT</h2>
+    <div class="section-line"></div>
+  </div>
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-      <div class="container">
-        <div></div>
+  <div class="char-sheet">
+    <div class="char-portrait">
+      <div class="avatar-frame">🎮</div>
+      <div class="char-name-block">
+        <div class="char-name">ROSEMARY J. RAVELO</div>
+        <div class="char-class">UX RESEARCHER</div>
+        <div class="char-level">LVL 30 · 30,000 XP</div>
       </div>
-    </footer>
-    <!-- End  Footer -->
+      <div class="attr-list">
+        <div class="attr-row"><span class="attr-key">LOCATION</span><span class="attr-val">Remote / West Virginia</span></div>
+        <div class="attr-row"><span class="attr-key">STUDIO</span><span class="attr-val gold">Cap Tech</span></div>
+        <div class="attr-row"><span class="attr-key">SPEC</span><span class="attr-val">Human Factors</span></div>
+        <div class="attr-row"><span class="attr-key">PLATFORM</span><span class="attr-val">PC · Console · Mobile</span></div>
+        <div class="attr-row"><span class="attr-key">PREV GUILDS</span><span class="attr-val">Tech Fleet</span></div>
+        <div class="attr-row"><span class="attr-key">STATUS</span><span class="attr-val gold">OPEN TO OFFERS</span></div>
+      </div>
+    </div>
+    <div class="char-bio">
+      <p class="bio-text">
+        I am a human factors and user experience researcher passionate about leveraging <strong>data-driven insights</strong> to create meaningful, user-centered experiences. With a PhD in Human Factors completed in May 2026, I specialize in <strong>bridging the gap</strong> between user behavior, system design, and real-world decision-making.
+      </p>
+      <p class="bio-text">
+        I focus on <strong>optimizing usability, engagement, and cognitive flow</strong> across digital products. My approach combines rigorous behavioral research with a deep understanding of cognitive patterns to deliver actionable insights that improve usability, efficiency, and overall user experience across a wide range of domains.
+      </p>
+      <div class="core-skills">
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>USABILITY TESTING</span><span>95</span></div>
+          <div class="skill-track"><div class="skill-fill" style="width:95%; --delay:0.1s"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>PLAYTESTING</span><span>90</span></div>
+          <div class="skill-track"><div class="skill-fill" style="width:90%; --delay:0.2s"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>HEURISTICS</span><span>85</span></div>
+          <div class="skill-track"><div class="skill-fill" style="width:85%; --delay:0.3s"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>QUAL RESEARCH</span><span>92</span></div>
+          <div class="skill-track"><div class="skill-fill" style="width:92%; --delay:0.4s"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>DATA ANALYSIS</span><span>85</span></div>
+          <div class="skill-track"><div class="skill-fill" style="width:85%; --delay:0.5s"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>FIGMA</span><span>88</span></div>
+          <div class="skill-track"><div class="skill-fill" style="width:88%; --delay:0.6s"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <a
-      href="#"
-      class="back-to-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
+<!-- QUESTS / CASE STUDIES -->
+<section id="quests" style="max-width:1200px; margin:0 auto; padding:6rem 3rem;">
+  <div class="section-header">
+    <div class="section-tag">// ACTIVE_QUESTS.LOG</div>
+    <h2 class="section-title">QUEST LOG</h2>
+    <div class="section-line"></div>
+  </div>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/typed.js/typed.min.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
+  <div class="quests-grid">
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-  </body>
+    <a class="quest-card" href="taino-language-app.html">
+      <div class="quest-number">
+        <span class="quest-num-label">QUEST</span>
+        <span class="quest-num-val">01</span>
+      </div>
+      <div class="quest-body">
+        <div class="quest-tags">
+          <span class="tag tag-mag">ACCESSIBILITY</span>
+          <span class="tag tag-gold">UX RESEARCH</span>
+        </div>
+        <h3 class="quest-title">Taino Language App</h3>
+        <p class="quest-desc">A language learning application designed to help users learn a modern variant of the Taino language. Focused on accessibility and gamified player progression. Guided research cycles for emerging platforms and language tools.</p>
+        <div class="quest-outcomes">
+          <span class="outcome">Gamified Progression</span>
+          <span class="outcome">Accessibility Focused</span>
+          <span class="outcome">Campaign Viewable</span>
+        </div>
+      </div>
+      <div class="quest-meta">
+        <div class="xp-badge">+8,400 XP<br>COMPLETED</div>
+        <div class="difficulty">
+          <div class="diff-pip active"></div>
+          <div class="diff-pip active"></div>
+          <div class="diff-pip active"></div>
+          <div class="diff-pip active"></div>
+          <div class="diff-pip"></div>
+        </div>
+      </div>
+    </a>
+
+    <a class="quest-card" href="graduate-research-node.html">
+      <div class="quest-number">
+        <span class="quest-num-label">QUEST</span>
+        <span class="quest-num-val">02</span>
+      </div>
+      <div class="quest-body">
+        <div class="quest-tags">
+          <span class="tag tag-cyan">UX RESEARCH</span>
+          <span class="tag tag-orange">GAMES RESEARCH</span>
+        </div>
+        <h3 class="quest-title">Graduate Research Thesis</h3>
+        <p class="quest-desc">Investigation of usability features in Minecraft: Creative Mode and their impact on player flow, immersion, and temporal distortion. Analyzing bidirectional relationships between cognitive states.</p>
+        <div class="quest-outcomes">
+          <span class="outcome">Flow & Immersion</span>
+          <span class="outcome">Temporal Distortion</span>
+          <span class="outcome">PhD Thesis Finalized</span>
+        </div>
+      </div>
+      <div class="quest-meta">
+        <div class="xp-badge">+12,000 XP<br>COMPLETED</div>
+        <div class="difficulty">
+          <div class="diff-pip active"></div>
+          <div class="diff-pip active"></div>
+          <div class="diff-pip active"></div>
+          <div class="diff-pip active"></div>
+          <div class="diff-pip active"></div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- SKILLS GRID -->
+<section id="skills" style="max-width:1200px; margin:0 auto; padding:6rem 3rem;">
+  <div class="section-header">
+    <div class="section-tag">// SKILLSET_MANIFEST</div>
+    <h2 class="section-title">SKILLS</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="skills-container">
+    <div class="skill-category">
+      <div class="skill-cat-title">RESEARCH METHODS</div>
+      <div class="skill-cat-sub">User Research & Evaluation</div>
+      <div class="method-chips">
+        <span class="method-chip">Usability Testing</span>
+        <span class="method-chip">User Interviewing</span>
+        <span class="method-chip">Heuristic Evaluation</span>
+        <span class="method-chip">Task Analysis</span>
+        <span class="method-chip">Journey Mapping</span>
+        <span class="method-chip">User Personas</span>
+        <span class="method-chip">Playtesting</span>
+        <span class="method-chip">Surveys</span>
+        <span class="method-chip">Human Factors</span>
+      </div>
+    </div>
+    <div class="skill-category" style="border-right:none;">
+      <div class="skill-cat-title">QUANTITATIVE & ANALYSIS</div>
+      <div class="skill-cat-sub">Data & Statistical Methods</div>
+      <div class="method-chips">
+        <span class="method-chip">Data Analysis</span>
+        <span class="method-chip">Statistical Analysis</span>
+        <span class="method-chip">Behavioral Analysis</span>
+        <span class="method-chip">Cognitive Patterns</span>
+        <span class="method-chip">Flow Analysis</span>
+      </div>
+    </div>
+    <div class="skill-category" style="border-bottom:none;">
+      <div class="skill-cat-title">GAME-SPECIFIC</div>
+      <div class="skill-cat-sub">Domain Expertise</div>
+      <div class="method-chips">
+        <span class="method-chip">Player Immersion</span>
+        <span class="method-chip">Game Flow Analysis</span>
+        <span class="method-chip">Player Synergy</span>
+        <span class="method-chip">Mechanic Integration</span>
+        <span class="method-chip">Gamified Progression</span>
+      </div>
+    </div>
+    <div class="skill-category" style="border-right:none; border-bottom:none;">
+      <div class="skill-cat-title">TOOLS & PLATFORMS</div>
+      <div class="skill-cat-sub">Software & Mastery</div>
+      <div class="method-chips">
+        <span class="method-chip">Figma</span>
+        <span class="method-chip">FigJam</span>
+        <span class="method-chip">Notion</span>
+        <span class="method-chip">Python</span>
+        <span class="method-chip">SurveyMonkey</span>
+        <span class="method-chip">Google Forms</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" style="max-width:1200px; margin:0 auto; padding:6rem 3rem;">
+  <div class="section-header">
+    <div class="section-tag">// ACHIEVEMENTS_UNLOCKED</div>
+    <h2 class="section-title">TECH TREE</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="achievements-grid">
+    <div class="achievement">
+      <div class="ach-icon">🎓</div>
+      <div class="ach-body">
+        <div class="ach-title">PhD Human Factors</div>
+        <div class="ach-desc">Doctor of Philosophy — Capitol Technology University, Laurel, MD (Completed May 2026)</div>
+        <div class="ach-rarity rarity-legendary">★ LEGENDARY</div>
+      </div>
+    </div>
+    <div class="achievement">
+      <div class="ach-icon">📖</div>
+      <div class="ach-body">
+        <div class="ach-title">MS Psychology</div>
+        <div class="ach-desc">Graduate Degree in Psychology — Focus on behavioral and cognitive patterns.</div>
+        <div class="ach-rarity rarity-epic">◆ EPIC</div>
+      </div>
+    </div>
+    <div class="achievement">
+      <div class="ach-icon">🛠️</div>
+      <div class="ach-body">
+        <div class="ach-title">UX Research Apprentice</div>
+        <div class="ach-desc">Tech Fleet (2024-2025) — Guided research cycles for emerging platforms.</div>
+        <div class="ach-rarity rarity-epic">◆ EPIC</div>
+      </div>
+    </div>
+    <div class="achievement">
+      <div class="ach-icon">🧠</div>
+      <div class="ach-body">
+        <div class="ach-title">Mental Health Therapist</div>
+        <div class="ach-desc">Lifetime Counseling Center (2018-2020) — Clinical behavioral analysis.</div>
+        <div class="ach-rarity rarity-rare">● RARE</div>
+      </div>
+    </div>
+    <div class="achievement">
+      <div class="ach-icon">🚀</div>
+      <div class="ach-body">
+        <div class="ach-title">Quest Starter</div>
+        <div class="ach-desc">Taino Language App — Successfully launched gamified accessibility research.</div>
+        <div class="ach-rarity rarity-epic">◆ EPIC</div>
+      </div>
+    </div>
+    <div class="achievement">
+      <div class="ach-icon">🤝</div>
+      <div class="ach-body">
+        <div class="ach-title">User-Centered</div>
+        <div class="ach-desc">Dedicated to bridging user behavior and system design through research-driven insights.</div>
+        <div class="ach-rarity rarity-legendary">★ LEGENDARY</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT TERMINAL -->
+<section id="contact" style="max-width:1200px; margin:0 auto; padding:6rem 3rem;">
+  <div class="section-header">
+    <div class="section-tag">// OPEN_COMMS.SH</div>
+    <h2 class="section-title">COMM-LINK</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="terminal">
+    <div class="terminal-titlebar">
+      <div class="tb-dots">
+        <div class="tb-dot tb-dot-r"></div>
+        <div class="tb-dot tb-dot-y"></div>
+        <div class="tb-dot tb-dot-g"></div>
+      </div>
+      <span><span>Rosemary J. Ravelo</span> — zsh — 80×24</span>
+    </div>
+    <div class="terminal-body">
+      <div class="term-line"><span class="term-prompt">rosemary@portfolio:~$ </span><span class="term-cmd">whoami --verbose</span></div>
+      <div class="term-line term-output gold">Rosemary J. Ravelo · UX Researcher</div>
+      <div class="term-line term-output">UX Researcher specializing in Human Factors.</div>
+      <br>
+      <div class="term-line"><span class="term-prompt">rosemary@portfolio:~$ </span><span class="term-cmd">cat availability.txt</span></div>
+      <div class="term-line term-output">STATUS: OPEN TO OFFERS</div>
+      <div class="term-line term-output">PREFERENCE: UX, Human Factors, Remote/Hybrid</div>
+      <div class="term-line term-output">NOTICE: Standard (negotiable)</div>
+      <br>
+      <div class="term-line"><span class="term-prompt">rosemary@portfolio:~$ </span><span class="term-cmd">send_message --to rosemary<span class="term-cursor"></span></span></div>
+    </div>
+
+    <div class="contact-links" style="margin:0; border-top: 1px solid var(--border); padding:0;">
+      <a class="contact-link email-link" href="#">
+        <div class="cl-icon">📧</div>
+        <div class="cl-body">
+          <div class="cl-label">EMAIL</div>
+          <div class="cl-val email-inject"></div>
+        </div>
+      </a>
+      <a class="contact-link" href="https://www.linkedin.com/in/rosemaryjravelo/" target="_blank">
+        <div class="cl-icon">💼</div>
+        <div class="cl-body">
+          <div class="cl-label">LINKEDIN</div>
+          <div class="cl-val">/in/rosemaryjravelo</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 ROSEMARY J. RAVELO · <span>UX & GAMES RESEARCHER</span> · ALL RIGHTS RESERVED</p>
+  <p style="margin-top:0.8rem; font-size:0.55rem;">BUILT WITH: HTML · CSS · PASSION FOR USER EXPERIENCE · NO FRAMEWORKS HARMED</p>
+</footer>
+
+<script>
+  // Pixel particle system
+  const pixelBg = document.getElementById('pixels');
+  const PIXEL_COUNT = 60;
+
+  for (let i = 0; i < PIXEL_COUNT; i++) {
+    const p = document.createElement('div');
+    p.className = 'pixel';
+    p.style.left = Math.random() * 100 + 'vw';
+    p.style.animationDuration = (6 + Math.random() * 14) + 's';
+    p.style.animationDelay = (Math.random() * 10) + 's';
+    const hue = Math.random() > 0.6 ? 'var(--magenta)' : Math.random() > 0.5 ? 'var(--gold)' : 'var(--cyan)';
+    p.style.background = hue;
+    p.style.width = (Math.random() > 0.7 ? 4 : 2) + 'px';
+    p.style.height = p.style.width;
+    pixelBg.appendChild(p);
+  }
+
+  // Glitch effect on hero name — random interval
+  const heroName = document.querySelector('.hero-name');
+  function glitch() {
+    heroName.style.transform = `translate(${(Math.random()-0.5)*4}px, ${(Math.random()-0.5)*2}px)`;
+    heroName.style.filter = `hue-rotate(${Math.random()*40}deg)`;
+    setTimeout(() => {
+      heroName.style.transform = '';
+      heroName.style.filter = '';
+    }, 80);
+  }
+
+  setInterval(glitch, 3000 + Math.random() * 4000);
+
+  // Animate stats count-up
+  function animateCounter(el, target, suffix='') {
+    const dur = 1500;
+    const start = performance.now();
+    const isPlus = target.toString().includes('+');
+    const isPercent = target.toString().includes('%');
+    const num = parseInt(target);
+    const formatted = target;
+
+    function step(now) {
+      const progress = Math.min((now - start) / dur, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(ease * num);
+      let display = current;
+      if (isPlus) display += '+';
+      if (isPercent) display += '%';
+      el.textContent = progress < 1 ? display : formatted;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  const statVals = document.querySelectorAll('.stat-val');
+
+statVals.forEach((el, i) => {
+  const target = el.textContent.trim();
+  setTimeout(() => animateCounter(el, target), i * 150);
+});
+
+  // Active nav link
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--cyan)' : '';
+    });
+  }, { passive: true });
+
+  // Email injection
+  (function() {
+    const u = 'rjravelo99';
+    const d = 'gmail.com';
+    const e = u + '@' + d;
+    const msg = 'Send me an e-mail'
+    document.querySelectorAll('.email-inject').forEach(el => el.textContent = msg);
+    document.querySelectorAll('.email-link').forEach(el => el.href = 'mailto:' + e);
+  })();
+</script>
+</body>
 </html>
