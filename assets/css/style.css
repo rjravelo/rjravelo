@@ -596,7 +596,7 @@ section {
   grid-template-columns: auto 1fr auto;
   align-items: stretch;
   transition: background 0.2s;
-  cursor: crosshair;
+  cursor: pointer;
   text-decoration: none;
   color: inherit;
 }
@@ -712,7 +712,6 @@ section {
 
 .quest-meta {
   padding: 2rem 2rem;
-  border-left: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   justify-content: center;
