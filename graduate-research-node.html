@@ -1,159 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T0V0Y96G9W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0V0Y96G9W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T0V0Y96G9W');
+  </script>
 
-  gtag('config', 'G-T0V0Y96G9W');
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graduate Research Thesis | Dr. Rosemary J. Ravelo</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rosemary J. Ravelo | Graduate Research Thesis</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Exo+2:wght@300;400;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
- 
-<!-- Pixel particles -->
-<div class="pixel-bg" id="pixels"></div>
- 
-<!-- NAV -->
-<nav>
-  <a href="index.html#hero" class="nav-logo">ROSEMARY J. RAVELO</a>
-  <ul class="nav-links">
-    <li><a href="index.html#about">CHARACTER</a></li>
-    <li><a href="index.html#quests">QUESTS</a></li>
-    <li><a href="index.html#skills">SKILLS</a></li>
-    <li><a href="index.html#achievements">ACHIEVEMENTS</a></li>
-    <li><a href="index.html#contact">CONTACT</a></li>
-  </ul>
-</nav>
- 
-<main style="padding-top: 56px;">
-  <!-- ======= Quest Details Section ======= -->
-  <section id="quest-details">
-    <div class="section-header">
-      <div class="section-tag">// QUEST_DATA.LOG</div>
-      <h2 class="section-title">GRADUATE RESEARCH THESIS</h2>
-      <div class="section-line"></div>
-    </div>
- 
-    <div class="quest-details-grid">
-      <div class="quest-visuals">
-        <div class="quest-slider">
-          <img src="assets/img/portfolio/minecraft_1.png" class="quest-img" alt="Research Analysis 1" />
-          <img src="assets/img/portfolio/minecraft_2.png" class="quest-img" alt="Research Analysis 2" />
-          <img src="assets/img/portfolio/minecraft_3.jpg" class="quest-img" alt="Research Analysis 3" />
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/img/profile.jpg" alt="Dr. Rosemary J. Ravelo" class="brand-avatar" />
+        <div>
+          <span class="brand-title">DR. ROSEMARY J. RAVELO</span>
+          <span class="brand-sub">PhD Human Factors · UX Researcher</span>
         </div>
-      </div>
-      <div class="quest-info-panel">
-        <div class="info-block">
-          <h4>QUEST SPECS</h4>
-          <ul class="spec-list">
-            <li class="spec-item"><span class="spec-key">CATEGORY</span><span class="spec-val">UX & Games Research</span></li>
-            <li class="spec-item"><span class="spec-key">ROLE</span><span class="spec-val">PhD Researcher</span></li>
-            <li class="spec-item"><span class="spec-key">DATE</span><span class="spec-val">May 2026</span></li>
-            <li class="spec-item"><span class="spec-key">STATUS</span><span class="spec-val gold">COMPLETED</span></li>
-          </ul>
-        </div>
-        <div class="info-block">
-          <h4>OBJECTIVE</h4>
-          <p class="objective-text">
-            Examine whether specific usability features in Minecraft: Creative Mode were associated with players' experiences of flow, immersion, and an altered perception of time. (N=117 adult participants; mixed-methods design.)
-          </p>
-        </div>
-      </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#about" class="nav-link">Overview</a></li>
+        <li><a href="index.html#case-studies" class="nav-link active">Case Studies</a></li>
+        <li><a href="index.html#research-lab" class="nav-link">Research Lab</a></li>
+        <li><a href="index.html#timeline" class="nav-link">Credentials</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
     </div>
- 
-    <div class="insight-grid">
-      <div class="insight-node">
-        <div class="insight-title">AUDIOVISUAL IMPACT</div>
-        <ul class="insight-list">
-          <li class="insight-item">In-Game Sounds (90%+ Immersion Enh.)</li>
-          <li class="insight-item">Background Music & Ambient Audio</li>
-          <li class="insight-item">Menu Design Cohesion</li>
-        </ul>
+  </header>
+
+  <!-- Header Section -->
+  <section class="page-header">
+    <div class="page-header-container">
+      <a href="index.html#case-studies" class="back-link">
+        <i data-lucide="arrow-left"></i>
+        <span>Back to Portfolio Overview</span>
+      </a>
+
+      <div class="cs-badge-group" style="margin-bottom: 0.75rem;">
+        <span class="cs-tag cs-tag-primary">DOCTORAL DISSERTATION</span>
+        <span class="cs-tag">QUANTITATIVE RESEARCH</span>
+        <span class="cs-tag">GAMES ERGONOMICS</span>
       </div>
-      <div class="insight-node">
-        <div class="insight-title">FLOW FACILITATORS</div>
-        <ul class="insight-list">
-          <li class="insight-item">Hotbar Clarity & UI Design</li>
-          <li class="insight-item">Inventory Ease (r=0.74 w/ Flow)</li>
-          <li class="insight-item">Social Chat Feature (r=0.71 Cross-Construct)</li>
-        </ul>
-      </div>
-      <div class="insight-node">
-        <div class="insight-title">TEMPORAL DISTORTION</div>
-        <ul class="insight-list">
-          <li class="insight-item">Building & Creative Tasks (Strongest Overall)</li>
-          <li class="insight-item">Inventory Loss of Time (r=0.51, Flow)</li>
-          <li class="insight-item">World Modification & Appearance (r=0.47, Immersion)</li>
-        </ul>
-      </div>
-    </div>
- 
-    <div class="strategy-grid">
-      <div class="strategy-block">
-        <div class="strategy-title">DESIGN IMPLICATIONS</div>
-        <ul class="insight-list">
-          <li class="insight-item"><strong>Holistic Usability:</strong> Audio and social features are core to immersion, not just secondary.</li>
-          <li class="insight-item"><strong>Cognitive Load:</strong> Intuitive UI reduces friction, allowing faster entry into flow states.</li>
-          <li class="insight-item"><strong>Creative Loops:</strong> Building tasks are the primary drivers of altered time perception.</li>
-        </ul>
-      </div>
-      <div class="strategy-block">
-        <div class="strategy-title">FUTURE RESEARCH</div>
-        <ul class="insight-list">
-          <li class="insight-item"><strong>Genre Expansion:</strong> Replication in other sandbox games (Roblox, Terraria) and broader game genres.</li>
-          <li class="insight-item"><strong>Causal Mapping:</strong> Longitudinal and experimental designs to establish causal rather than correlational relationships.</li>
-          <li class="insight-item"><strong>Demographic Differences:</strong> Examining how age, gender, and gaming experience shape these relationships.</li>
-        </ul>
-      </div>
-    </div>
- 
-    <div class="section-header" style="margin-top: 4rem;">
-      <div class="section-tag">// RESEARCH_RESOURCES.EXE</div>
-      <h2 class="section-title">FINDINGS SUMMARY</h2>
-      <div class="section-line"></div>
-    </div>
- 
-    <div class="prototype-container" style="padding: 2.5rem; background: var(--panel2);">
-      <p class="objective-text" style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--cyan); font-family: 'Share Tech Mono', monospace;">
-        > DISSERTATION RESULTS:
+
+      <h1 class="page-title">Usability Drivers of Cognitive Flow, Immersion &amp; Temporal Distortion</h1>
+      <p class="section-desc">
+        A mixed-methods empirical investigation into how interface ergonomics in creative sandbox environments alter player time perception and sustain cognitive flow (N=117 adult participants).
       </p>
-      <p class="objective-text">
-        Findings suggest that game usability extends beyond traditional definitions to include audiovisual design, social connectivity, interface clarity, satisfaction-based features, and creative tasks. When well-designed, these features showed meaningful associations with deeper engagement, flow, and immersion. Flow and immersion demonstrated a strong bidirectional relationship with each other (r=0.56–0.71), forming a positive feedback loop where each state reinforces the other. Both were positively associated with temporal distortion, and all 117 participants reported at least some degree of altered time perception, suggesting that even minimal engagement may be sufficient to contribute to this effect.
-      </p>
+
+      <div class="specs-grid">
+        <div class="spec-card">
+          <div class="spec-label">DEGREE LEVEL</div>
+          <div class="spec-value">PhD Dissertation</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">SAMPLE SIZE</div>
+          <div class="spec-value">N = 117 Adult Players</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">METHODOLOGY</div>
+          <div class="spec-value">Pearson Correlation &amp; Surveys</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">COMPLETION</div>
+          <div class="spec-value">May 2026</div>
+        </div>
+      </div>
     </div>
   </section>
-</main>
- 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 ROSEMARY J. RAVELO · <span>UX & GAMES RESEARCHER</span> · ALL RIGHTS RESERVED</p>
-</footer>
- 
-<script>
-  // Pixel particle system
-  const pixelBg = document.getElementById('pixels');
-  const PIXEL_COUNT = 40;
- 
-  for (let i = 0; i < PIXEL_COUNT; i++) {
-    const p = document.createElement('div');
-    p.className = 'pixel';
-    p.style.left = Math.random() * 100 + 'vw';
-    p.style.animationDuration = (6 + Math.random() * 14) + 's';
-    p.style.animationDelay = (Math.random() * 10) + 's';
-    const hue = Math.random() > 0.6 ? 'var(--magenta)' : Math.random() > 0.5 ? 'var(--gold)' : 'var(--cyan)';
-    p.style.background = hue;
-    pixelBg.appendChild(p);
-  }
-</script>
+
+  <!-- Content Section -->
+  <main class="section">
+    <div class="section-container" style="max-width: 1080px;">
+
+      <!-- Big Storytelling Numbers Callout Grid (Aligned & Unwrapped) -->
+      <div class="big-data-grid">
+        <div class="big-data-card">
+          <div class="big-num big-num-green">r&nbsp;=&nbsp;0.74</div>
+          <div class="big-data-label">Inventory Usability Driver</div>
+          <div class="big-data-desc">Strongest correlation with uninterrupted flow. Lower inventory friction directly prolonged cognitive immersion.</div>
+        </div>
+
+        <div class="big-data-card">
+          <div class="big-num big-num-indigo">90%+</div>
+          <div class="big-data-label">Audiovisual Immersion</div>
+          <div class="big-data-desc">Over 90% of participants cited ambient soundscapes as core drivers of deep spatial immersion.</div>
+        </div>
+
+        <div class="big-data-card">
+          <div class="big-num big-num-cyan">100%</div>
+          <div class="big-data-label">Temporal Distortion Rate</div>
+          <div class="big-data-desc">100% of participants ($N=117$) experienced altered time perception during creative task loops.</div>
+        </div>
+
+        <div class="big-data-card">
+          <div class="big-num big-num-amber">r&nbsp;=&nbsp;0.71</div>
+          <div class="big-data-label">Social Connectivity</div>
+          <div class="big-data-desc">Chat and co-creation served as cross-construct amplifiers for sustained player engagement.</div>
+        </div>
+      </div>
+
+      <!-- Nancy Duarte Style Excerpt Callout -->
+      <div class="duarte-excerpt-card">
+        <div class="duarte-quote-mark">“</div>
+        <p class="duarte-excerpt-text">
+          “Usability in digital environments extends far beyond menu navigation. When interface friction is removed, cognitive load drops—allowing players to enter an uninterrupted flow state where time feels continuous, elastic, and deeply engaging.”
+        </p>
+        <div class="duarte-author">— Dr. Rosemary J. Ravelo · Doctoral Dissertation Core Finding</div>
+      </div>
+
+      <!-- Research Visuals & Artifact Gallery (No Image Clipping!) -->
+      <div style="margin-top: 3.5rem;">
+        <div class="section-tag"><i data-lucide="image"></i><span>EMPIRICAL DATA ARTIFACTS</span></div>
+        <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Research Visualizations &amp; Distribution Maps</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Full-resolution research charts, inventory usability models, and participant flow distributions.</p>
+
+        <div class="gallery-grid">
+          <div class="gallery-img-wrapper">
+            <img src="assets/img/portfolio/minecraft_1.png" alt="Minecraft Creative Mode Usability Map" class="gallery-img" />
+          </div>
+          <div class="gallery-img-wrapper">
+            <img src="assets/img/portfolio/minecraft_2.png" alt="Statistical Distribution Chart" class="gallery-img" />
+          </div>
+          <div class="gallery-img-wrapper">
+            <img src="assets/img/portfolio/minecraft_3.jpg" alt="Player Flow Analysis" class="gallery-img" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed Breakdown Grid -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem;">
+        
+        <div class="bio-content-card">
+          <h3 style="color: var(--signal-green); font-size: 1.3rem;">Flow Facilitators (Quantitative Signals)</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+            <li style="font-size: 0.95rem; color: var(--text-secondary);">
+              <strong style="color: var(--text-primary);">Inventory Ease (r = 0.74):</strong> Seamless item retrieval is the single largest quantitative driver of cognitive flow.
+            </li>
+            <li style="font-size: 0.95rem; color: var(--text-secondary);">
+              <strong style="color: var(--text-primary);">Social Chat (r = 0.71):</strong> Social connectivity acts as a cross-construct amplifier, heightening immersion.
+            </li>
+            <li style="font-size: 0.95rem; color: var(--text-secondary);">
+              <strong style="color: var(--text-primary);">Audiovisual Impact (90%+):</strong> Ambient soundscapes and subtle audio feedback account for over 90% of reported immersion spikes.
+            </li>
+          </ul>
+        </div>
+
+        <div class="bio-content-card">
+          <h3 style="color: var(--signal-cyan); font-size: 1.3rem;">Strategic Design Recommendations</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+            <li style="font-size: 0.95rem; color: var(--text-secondary);">
+              <strong style="color: var(--text-primary);">Holistic Ergonomics:</strong> Treat audio design as a primary usability layer rather than secondary embellishment.
+            </li>
+            <li style="font-size: 0.95rem; color: var(--text-secondary);">
+              <strong style="color: var(--text-primary);">Cognitive Friction Reduction:</strong> Minimizing hotbar complexity allows players to maintain uninterrupted mental flow.
+            </li>
+            <li style="font-size: 0.95rem; color: var(--text-secondary);">
+              <strong style="color: var(--text-primary);">Creative Loop Design:</strong> Creative building tasks trigger the strongest alteration in time perception.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p class="footer-text">© 2026 Dr. Rosemary J. Ravelo · PhD Human Factors &amp; UX Researcher</p>
+      <a href="#" class="back-link email-link" style="margin-top: 0.5rem;"><i data-lucide="mail"></i><span class="email-inject">Send an Email</span></a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

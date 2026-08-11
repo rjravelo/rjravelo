@@ -1,467 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T0V0Y96G9W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0V0Y96G9W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T0V0Y96G9W');
+  </script>
 
-  gtag('config', 'G-T0V0Y96G9W');
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rosemary J. Ravelo | UX & Human Factors Researcher</title>
+  <meta name="description" content="Portfolio of Rosemary J. Ravelo, PhD in Human Factors. Specializing in data storytelling, cognitive flow, game usability, and quantitative behavioral research.">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rosemary J. Ravelo | UX Researcher</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Exo+2:wght@300;400;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-<!-- Pixel particles -->
-<div class="pixel-bg" id="pixels"></div>
-
-<!-- NAV -->
-<nav>
-  <a href="#hero" class="nav-logo">ROSEMARY J. RAVELO</a>
-  <ul class="nav-links">
-    <li><a href="#about">CHARACTER</a></li>
-    <li><a href="#quests">QUESTS</a></li>
-    <li><a href="#skills">SKILLS</a></li>
-    <li><a href="#achievements">ACHIEVEMENTS</a></li>
-    <li><a href="#contact">CONTACT</a></li>
-  </ul>
-  <div class="nav-badge">AVAILABLE FOR HIRE</div>
-</nav>
-
-<!-- HERO -->
-<section id="hero" style="max-width:100%; padding:0;">
-  <div class="hero-grid"></div>
-  <div class="hero-vignette"></div>
-  <div class="hero-content">
-    <div class="hero-insert">▶ INSERT COIN TO PLAY ◀</div>
-    <h1 class="hero-name">
-      <span class="cyan">UX</span><br>
-      RESEARCHER<br>
-      <span class="mag">LEVEL 30</span>
-    </h1>
-    <p class="hero-role">// ROSEMARY J. RAVELO · HUMAN FACTORS</p>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="stat-val">10+</span>
-        <span class="stat-lbl">YRS EXP</span>
-      </div>
-      <div class="hero-stat">
-        <span class="stat-val">2+</span>
-        <span class="stat-lbl">PROJECTS</span>
-      </div>
-      <div class="hero-stat">
-        <span class="stat-val">100%</span>
-        <span class="stat-lbl">PASSION</span>
-      </div>
-    </div>
-    <div class="hero-cta">
-      <a href="#quests" class="btn btn-primary">VIEW QUEST LOG</a>
-      <a href="#contact" class="btn btn-secondary">SEND MESSAGE</a>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT / CHARACTER SHEET -->
-<section id="about" style="max-width:1200px; margin:0 auto; padding: 6rem 3rem;">
-  <div class="section-header">
-    <div class="section-tag">// CHARACTER_SHEET.EXE</div>
-    <h2 class="section-title">ABOUT</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="char-sheet">
-    <div class="char-portrait">
-      <div class="avatar-frame">🎮</div>
-      <div class="char-name-block">
-        <div class="char-name">ROSEMARY J. RAVELO</div>
-        <div class="char-class">UX RESEARCHER</div>
-        <div class="char-level">LVL 30 · 30,000 XP</div>
-      </div>
-      <div class="attr-list">
-        <div class="attr-row"><span class="attr-key">LOCATION</span><span class="attr-val">Remote / West Virginia</span></div>
-        <div class="attr-row"><span class="attr-key">STUDIO</span><span class="attr-val gold">Cap Tech</span></div>
-        <div class="attr-row"><span class="attr-key">SPEC</span><span class="attr-val">Human Factors</span></div>
-        <div class="attr-row"><span class="attr-key">PLATFORM</span><span class="attr-val">PC · Console · Mobile</span></div>
-        <div class="attr-row"><span class="attr-key">PREV GUILDS</span><span class="attr-val">Tech Fleet</span></div>
-        <div class="attr-row"><span class="attr-key">STATUS</span><span class="attr-val gold">OPEN TO OFFERS</span></div>
-      </div>
-    </div>
-    <div class="char-bio">
-      <p class="bio-text">
-        I am a human factors and user experience researcher passionate about leveraging <strong>data-driven insights</strong> to create meaningful, user-centered experiences. With a PhD in Human Factors completed in May 2026, I specialize in <strong>bridging the gap</strong> between user behavior, system design, and real-world decision-making.
-      </p>
-      <p class="bio-text">
-        I focus on <strong>optimizing usability, engagement, and cognitive flow</strong> across digital products. My approach combines rigorous behavioral research with a deep understanding of cognitive patterns to deliver actionable insights that improve usability, efficiency, and overall user experience across a wide range of domains.
-      </p>
-      <div class="core-skills">
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>USABILITY TESTING</span><span>95</span></div>
-          <div class="skill-track"><div class="skill-fill" style="width:95%; --delay:0.1s"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>PLAYTESTING</span><span>90</span></div>
-          <div class="skill-track"><div class="skill-fill" style="width:90%; --delay:0.2s"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>HEURISTICS</span><span>85</span></div>
-          <div class="skill-track"><div class="skill-fill" style="width:85%; --delay:0.3s"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>QUAL RESEARCH</span><span>92</span></div>
-          <div class="skill-track"><div class="skill-fill" style="width:92%; --delay:0.4s"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>DATA ANALYSIS</span><span>85</span></div>
-          <div class="skill-track"><div class="skill-fill" style="width:85%; --delay:0.5s"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>FIGMA</span><span>88</span></div>
-          <div class="skill-track"><div class="skill-fill" style="width:88%; --delay:0.6s"></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- QUESTS / CASE STUDIES -->
-<section id="quests" style="max-width:1200px; margin:0 auto; padding:6rem 3rem;">
-  <div class="section-header">
-    <div class="section-tag">// ACTIVE_QUESTS.LOG</div>
-    <h2 class="section-title">QUEST LOG</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="quests-grid">
-
-    <a class="quest-card" href="taino-language-app.html">
-      <div class="quest-number">
-        <span class="quest-num-label">QUEST</span>
-        <span class="quest-num-val">01</span>
-      </div>
-      <div class="quest-body">
-        <div class="quest-tags">
-          <span class="tag tag-mag">ACCESSIBILITY</span>
-          <span class="tag tag-gold">UX RESEARCH</span>
-        </div>
-        <h3 class="quest-title">Taino Language App</h3>
-        <p class="quest-desc">A language learning application designed to help users learn a modern variant of the Taino language. Focused on accessibility and gamified player progression. Guided research cycles for emerging platforms and language tools.</p>
-        <div class="quest-outcomes">
-          <span class="outcome">Gamified Progression</span>
-          <span class="outcome">Accessibility Focused</span>
-          <span class="outcome">Campaign Viewable</span>
-        </div>
-      </div>
-      <div class="quest-meta">
-        <div class="xp-badge">+8,400 XP<br>COMPLETED</div>
-        <div class="difficulty">
-          <div class="diff-pip active"></div>
-          <div class="diff-pip active"></div>
-          <div class="diff-pip active"></div>
-          <div class="diff-pip active"></div>
-          <div class="diff-pip"></div>
-        </div>
-      </div>
-    </a>
-
-    <a class="quest-card" href="graduate-research-node.html">
-      <div class="quest-number">
-        <span class="quest-num-label">QUEST</span>
-        <span class="quest-num-val">02</span>
-      </div>
-      <div class="quest-body">
-        <div class="quest-tags">
-          <span class="tag tag-cyan">UX RESEARCH</span>
-          <span class="tag tag-orange">GAMES RESEARCH</span>
-        </div>
-        <h3 class="quest-title">Graduate Research Thesis</h3>
-        <p class="quest-desc">Investigation of usability features in Minecraft: Creative Mode and their impact on player flow, immersion, and temporal distortion. Analyzing bidirectional relationships between cognitive states.</p>
-        <div class="quest-outcomes">
-          <span class="outcome">Flow & Immersion</span>
-          <span class="outcome">Temporal Distortion</span>
-          <span class="outcome">PhD Thesis Finalized</span>
-        </div>
-      </div>
-      <div class="quest-meta">
-        <div class="xp-badge">+12,000 XP<br>COMPLETED</div>
-        <div class="difficulty">
-          <div class="diff-pip active"></div>
-          <div class="diff-pip active"></div>
-          <div class="diff-pip active"></div>
-          <div class="diff-pip active"></div>
-          <div class="diff-pip active"></div>
-        </div>
-      </div>
-    </a>
-
-  </div>
-</section>
-
-<!-- SKILLS GRID -->
-<section id="skills" style="max-width:1200px; margin:0 auto; padding:6rem 3rem;">
-  <div class="section-header">
-    <div class="section-tag">// SKILLSET_MANIFEST</div>
-    <h2 class="section-title">SKILLS</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="skills-container">
-    <div class="skill-category">
-      <div class="skill-cat-title">RESEARCH METHODS</div>
-      <div class="skill-cat-sub">User Research & Evaluation</div>
-      <div class="method-chips">
-        <span class="method-chip">Usability Testing</span>
-        <span class="method-chip">User Interviewing</span>
-        <span class="method-chip">Heuristic Evaluation</span>
-        <span class="method-chip">Task Analysis</span>
-        <span class="method-chip">Journey Mapping</span>
-        <span class="method-chip">User Personas</span>
-        <span class="method-chip">Playtesting</span>
-        <span class="method-chip">Surveys</span>
-        <span class="method-chip">Human Factors</span>
-      </div>
-    </div>
-    <div class="skill-category" style="border-right:none;">
-      <div class="skill-cat-title">QUANTITATIVE & ANALYSIS</div>
-      <div class="skill-cat-sub">Data & Statistical Methods</div>
-      <div class="method-chips">
-        <span class="method-chip">Data Analysis</span>
-        <span class="method-chip">Statistical Analysis</span>
-        <span class="method-chip">Behavioral Analysis</span>
-        <span class="method-chip">Cognitive Patterns</span>
-        <span class="method-chip">Flow Analysis</span>
-      </div>
-    </div>
-    <div class="skill-category" style="border-bottom:none;">
-      <div class="skill-cat-title">GAME-SPECIFIC</div>
-      <div class="skill-cat-sub">Domain Expertise</div>
-      <div class="method-chips">
-        <span class="method-chip">Player Immersion</span>
-        <span class="method-chip">Game Flow Analysis</span>
-        <span class="method-chip">Player Synergy</span>
-        <span class="method-chip">Mechanic Integration</span>
-        <span class="method-chip">Gamified Progression</span>
-      </div>
-    </div>
-    <div class="skill-category" style="border-right:none; border-bottom:none;">
-      <div class="skill-cat-title">TOOLS & PLATFORMS</div>
-      <div class="skill-cat-sub">Software & Mastery</div>
-      <div class="method-chips">
-        <span class="method-chip">Figma</span>
-        <span class="method-chip">FigJam</span>
-        <span class="method-chip">Notion</span>
-        <span class="method-chip">Python</span>
-        <span class="method-chip">SurveyMonkey</span>
-        <span class="method-chip">Google Forms</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ACHIEVEMENTS -->
-<section id="achievements" style="max-width:1200px; margin:0 auto; padding:6rem 3rem;">
-  <div class="section-header">
-    <div class="section-tag">// ACHIEVEMENTS_UNLOCKED</div>
-    <h2 class="section-title">TECH TREE</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="achievements-grid">
-    <div class="achievement">
-      <div class="ach-icon">🎓</div>
-      <div class="ach-body">
-        <div class="ach-title">PhD Human Factors</div>
-        <div class="ach-desc">Doctor of Philosophy — Capitol Technology University, Laurel, MD (Completed May 2026)</div>
-        <div class="ach-rarity rarity-legendary">★ LEGENDARY</div>
-      </div>
-    </div>
-    <div class="achievement">
-      <div class="ach-icon">📖</div>
-      <div class="ach-body">
-        <div class="ach-title">MS Psychology</div>
-        <div class="ach-desc">Graduate Degree in Psychology — Focus on behavioral and cognitive patterns.</div>
-        <div class="ach-rarity rarity-epic">◆ EPIC</div>
-      </div>
-    </div>
-    <div class="achievement">
-      <div class="ach-icon">🛠️</div>
-      <div class="ach-body">
-        <div class="ach-title">UX Research Apprentice</div>
-        <div class="ach-desc">Tech Fleet (2024-2025) — Guided research cycles for emerging platforms.</div>
-        <div class="ach-rarity rarity-epic">◆ EPIC</div>
-      </div>
-    </div>
-    <div class="achievement">
-      <div class="ach-icon">🧠</div>
-      <div class="ach-body">
-        <div class="ach-title">Mental Health Therapist</div>
-        <div class="ach-desc">Lifetime Counseling Center (2018-2020) — Clinical behavioral analysis.</div>
-        <div class="ach-rarity rarity-rare">● RARE</div>
-      </div>
-    </div>
-    <div class="achievement">
-      <div class="ach-icon">🚀</div>
-      <div class="ach-body">
-        <div class="ach-title">Quest Starter</div>
-        <div class="ach-desc">Taino Language App — Successfully launched gamified accessibility research.</div>
-        <div class="ach-rarity rarity-epic">◆ EPIC</div>
-      </div>
-    </div>
-    <div class="achievement">
-      <div class="ach-icon">🤝</div>
-      <div class="ach-body">
-        <div class="ach-title">User-Centered</div>
-        <div class="ach-desc">Dedicated to bridging user behavior and system design through research-driven insights.</div>
-        <div class="ach-rarity rarity-legendary">★ LEGENDARY</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT TERMINAL -->
-<section id="contact" style="max-width:1200px; margin:0 auto; padding:6rem 3rem;">
-  <div class="section-header">
-    <div class="section-tag">// OPEN_COMMS.SH</div>
-    <h2 class="section-title">COMM-LINK</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="terminal">
-    <div class="terminal-titlebar">
-      <div class="tb-dots">
-        <div class="tb-dot tb-dot-r"></div>
-        <div class="tb-dot tb-dot-y"></div>
-        <div class="tb-dot tb-dot-g"></div>
-      </div>
-      <span><span>Rosemary J. Ravelo</span> — zsh — 80×24</span>
-    </div>
-    <div class="terminal-body">
-      <div class="term-line"><span class="term-prompt">rosemary@portfolio:~$ </span><span class="term-cmd">whoami --verbose</span></div>
-      <div class="term-line term-output gold">Rosemary J. Ravelo · UX Researcher</div>
-      <div class="term-line term-output">UX Researcher specializing in Human Factors.</div>
-      <br>
-      <div class="term-line"><span class="term-prompt">rosemary@portfolio:~$ </span><span class="term-cmd">cat availability.txt</span></div>
-      <div class="term-line term-output">STATUS: OPEN TO OFFERS</div>
-      <div class="term-line term-output">PREFERENCE: UX, Human Factors, Remote/Hybrid</div>
-      <div class="term-line term-output">NOTICE: Standard (negotiable)</div>
-      <br>
-      <div class="term-line"><span class="term-prompt">rosemary@portfolio:~$ </span><span class="term-cmd">send_message --to rosemary<span class="term-cursor"></span></span></div>
-    </div>
-
-    <div class="contact-links" style="margin:0; border-top: 1px solid var(--border); padding:0;">
-      <a class="contact-link email-link" href="#">
-        <div class="cl-icon">📧</div>
-        <div class="cl-body">
-          <div class="cl-label">EMAIL</div>
-          <div class="cl-val email-inject"></div>
+  <!-- ==================== NAVIGATION ==================== -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <img src="assets/img/profile.jpg" alt="Rosemary J. Ravelo" class="brand-avatar" />
+        <div>
+          <span class="brand-title">ROSEMARY J. RAVELO</span>
+          <span class="brand-sub">PhD Human Factors · UX Researcher</span>
         </div>
       </a>
-      <a class="contact-link" href="https://www.linkedin.com/in/rosemaryjravelo/" target="_blank">
-        <div class="cl-icon">💼</div>
-        <div class="cl-body">
-          <div class="cl-label">LINKEDIN</div>
-          <div class="cl-val">/in/rosemaryjravelo</div>
-        </div>
-      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">Overview</a></li>
+        <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+        <li><a href="#research-lab" class="nav-link">Research Lab</a></li>
+        <li><a href="#timeline" class="nav-link">Credentials</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="mobile-toggle" aria-label="Toggle Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 ROSEMARY J. RAVELO · <span>UX & GAMES RESEARCHER</span> · ALL RIGHTS RESERVED</p>
-  <p style="margin-top:0.8rem; font-size:0.55rem;">BUILT WITH: HTML · CSS · PASSION FOR USER EXPERIENCE · NO FRAMEWORKS HARMED</p>
-</footer>
+  <!-- ==================== HERO SECTION (Centered & Unbroken) ==================== -->
+  <section id="hero" class="hero-section">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-overlay"></div>
 
-<script>
-  // Pixel particle system
-  const pixelBg = document.getElementById('pixels');
-  const PIXEL_COUNT = 60;
+    <div class="hero-container">
+      <div class="hero-text-block">
+        <div class="hero-eyebrow">
+          <i data-lucide="brain-circuit"></i>
+          <span>HUMAN FACTORS & BEHAVIORAL SCIENCE</span>
+        </div>
 
-  for (let i = 0; i < PIXEL_COUNT; i++) {
-    const p = document.createElement('div');
-    p.className = 'pixel';
-    p.style.left = Math.random() * 100 + 'vw';
-    p.style.animationDuration = (6 + Math.random() * 14) + 's';
-    p.style.animationDelay = (Math.random() * 10) + 's';
-    const hue = Math.random() > 0.6 ? 'var(--magenta)' : Math.random() > 0.5 ? 'var(--gold)' : 'var(--cyan)';
-    p.style.background = hue;
-    p.style.width = (Math.random() > 0.7 ? 4 : 2) + 'px';
-    p.style.height = p.style.width;
-    pixelBg.appendChild(p);
-  }
+        <h1 class="hero-title">
+          Quantifying Human Cognition &amp; <span class="text-gradient-green">Designing Seamless Flow</span>
+        </h1>
 
-  // Glitch effect on hero name — random interval
-  const heroName = document.querySelector('.hero-name');
-  function glitch() {
-    heroName.style.transform = `translate(${(Math.random()-0.5)*4}px, ${(Math.random()-0.5)*2}px)`;
-    heroName.style.filter = `hue-rotate(${Math.random()*40}deg)`;
-    setTimeout(() => {
-      heroName.style.transform = '';
-      heroName.style.filter = '';
-    }, 80);
-  }
+        <p class="hero-subtitle">
+          Translating complex human behavior into intuitive, high-impact product experiences using quantitative behavioral research, cognitive ergonomics, and data storytelling principles.
+        </p>
 
-  setInterval(glitch, 3000 + Math.random() * 4000);
+        <div class="hero-ctas">
+          <a href="#case-studies" class="btn btn-primary">
+            <span>Explore Case Studies</span>
+            <i data-lucide="arrow-down-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary email-link">
+            <span class="email-inject">Send an Email</span>
+            <i data-lucide="mail"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  // Animate stats count-up
-  function animateCounter(el, target, suffix='') {
-    const dur = 1500;
-    const start = performance.now();
-    const isPlus = target.toString().includes('+');
-    const isPercent = target.toString().includes('%');
-    const num = parseInt(target);
-    const formatted = target;
+  <!-- ==================== EXECUTIVE PROFILE / ABOUT ==================== -->
+  <section id="about" class="section">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="user-check"></i>
+          <span>EXECUTIVE PROFILE</span>
+        </div>
+        <h2 class="section-title">Bridging Human Psychology &amp; Product Ergonomics</h2>
+        <p class="section-desc">
+          Combining clinical mental health expertise with advanced Human Factors PhD research to decode how users think, feel, and interact with complex systems.
+        </p>
+      </div>
 
-    function step(now) {
-      const progress = Math.min((now - start) / dur, 1);
-      const ease = 1 - Math.pow(1 - progress, 3);
-      const current = Math.floor(ease * num);
-      let display = current;
-      if (isPlus) display += '+';
-      if (isPercent) display += '%';
-      el.textContent = progress < 1 ? display : formatted;
-      if (progress < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
+      <div class="bio-grid">
+        <!-- Profile Sticky Card -->
+        <div class="profile-card">
+          <div class="profile-img-wrapper">
+            <img src="assets/img/profile.jpg" alt="Rosemary J. Ravelo" class="profile-img" />
+          </div>
+          <h3 class="profile-name">Rosemary J. Ravelo, PhD</h3>
+          <div class="profile-role">Senior UX &amp; Human Factors Researcher</div>
 
-  const statVals = document.querySelectorAll('.stat-val');
+          <ul class="profile-meta-list">
+            <li class="profile-meta-item">
+              <span class="meta-label">Degree</span>
+              <span class="meta-val">PhD Human Factors</span>
+            </li>
+            <li class="profile-meta-item">
+              <span class="meta-label">University</span>
+              <span class="meta-val">Capitol Technology Univ.</span>
+            </li>
+            <li class="profile-meta-item">
+              <span class="meta-label">Specialization</span>
+              <span class="meta-val">Games &amp; Cognitive Flow</span>
+            </li>
+            <li class="profile-meta-item">
+              <span class="meta-label">Location</span>
+              <span class="meta-val">West Virginia / Remote</span>
+            </li>
+          </ul>
+        </div>
 
-statVals.forEach((el, i) => {
-  const target = el.textContent.trim();
-  setTimeout(() => animateCounter(el, target), i * 150);
-});
+        <!-- Narrative Content -->
+        <div class="bio-content-card">
+          <p class="bio-paragraph">
+            With a <strong>PhD in Human Factors (May 2026)</strong> and a Master's degree in Psychology, I specialize in identifying the cognitive friction points that prevent users from reaching optimal flow states. My approach goes beyond standard usability testing—I apply empirical statistical modeling to prove how interface clarity, audio feedback, and social dynamics drive deep immersion and engagement.
+          </p>
+          <p class="bio-paragraph">
+            My earlier clinical experience as a <strong>Mental Health Therapist</strong> gives me a unique advantage: an acute empathy for human emotion, cognitive overload, and subtle behavioral cues. Whether evaluating sandbox game mechanics or designing accessible language learning systems, I translate qualitative user stories into quantitative, actionable product strategies.
+          </p>
 
-  // Active nav link
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
+          <div class="bio-highlights">
+            <div class="highlight-box">
+              <div class="icon"><i data-lucide="bar-chart-3"></i></div>
+              <div class="highlight-title">Data Storytelling</div>
+              <div class="highlight-desc">Communicating high-signal statistical data to cross-functional leaders.</div>
+            </div>
+            <div class="highlight-box">
+              <div class="icon"><i data-lucide="gamepad-2"></i></div>
+              <div class="highlight-title">Games UX &amp; Flow</div>
+              <div class="highlight-desc">Analyzing temporal distortion and immersion mechanics in digital spaces.</div>
+            </div>
+            <div class="highlight-box">
+              <div class="icon"><i data-lucide="accessibility"></i></div>
+              <div class="highlight-title">Accessibility Focus</div>
+              <div class="highlight-desc">Building inclusive interfaces for diverse cognitive and physical needs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 100) current = s.id;
-    });
-    navLinks.forEach(a => {
-      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--cyan)' : '';
-    });
-  }, { passive: true });
+  <!-- ==================== CASE STUDIES (Storytelling with Data) ==================== -->
+  <section id="case-studies" class="section" style="background: var(--bg-surface);">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="folder-kanban"></i>
+          <span>FEATURED CASE STUDIES</span>
+        </div>
+        <h2 class="section-title">Data-Driven Research in Action</h2>
+        <p class="section-desc">
+          Structured case studies following Nancy Duarte &amp; Cole Nussbaumer Knaflic principles: defining the user context, highlighting critical signal data, and delivering strategic product value.
+        </p>
+      </div>
 
-  // Email injection
-  (function() {
-    const u = 'rjravelo99';
-    const d = 'gmail.com';
-    const e = u + '@' + d;
-    const msg = 'Send me an e-mail'
-    document.querySelectorAll('.email-inject').forEach(el => el.textContent = msg);
-    document.querySelectorAll('.email-link').forEach(el => el.href = 'mailto:' + e);
-  })();
-</script>
+      <!-- Case Study 1: PhD Dissertation Thesis -->
+      <div class="case-study-card">
+        <div class="cs-content">
+          <div class="cs-badge-group">
+            <span class="cs-tag cs-tag-primary">DOCTORAL THESIS</span>
+            <span class="cs-tag">GAMES UX</span>
+            <span class="cs-tag">N = 117 ADULT SAMPLE</span>
+          </div>
+
+          <h3 class="cs-title">Cognitive Flow &amp; Usability in Creative Sandbox Environments</h3>
+          <div class="cs-subtitle">Evaluating How Interface Usability Drivers Impact Player Immersion and Altered Time Perception</div>
+
+          <p class="cs-description">
+            Investigated the bidirectional relationship between UI ergonomics in <em>Minecraft: Creative Mode</em> and player cognitive states. Applied quantitative Pearson correlation models to isolate which interface features actively facilitate temporal distortion and uninterrupted creative flow.
+          </p>
+
+          <!-- Knaflic Narrative Callout -->
+          <div class="cs-data-narrative">
+            <div class="cs-data-headline">KEY DATA INSIGHT: r = 0.74 (Strong Positive Signal)</div>
+            <div class="cs-data-body">
+              Inventory management ease demonstrated the strongest correlation with player flow state. Reducing friction in item retrieval directly prolonged uninterrupted cognitive immersion.
+            </div>
+          </div>
+
+          <div class="cs-actions">
+            <a href="graduate-research-node.html" class="btn btn-primary btn-sm">
+              <span>Read Full Case Study</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Chart 1 -->
+        <div class="cs-visualizer-box">
+          <div class="cs-chart-header">
+            <span class="cs-chart-title">Pearson Correlation Matrix (r)</span>
+            <span class="cs-tag">Empirical Data</span>
+          </div>
+          <div class="chart-canvas-container">
+            <canvas id="phd-correlation-chart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 2: Taino Language App -->
+      <div class="case-study-card">
+        <div class="cs-content">
+          <div class="cs-badge-group">
+            <span class="cs-tag cs-tag-primary">UX RESEARCH &amp; ACCESSIBILITY</span>
+            <span class="cs-tag">GAMIFICATION</span>
+            <span class="cs-tag">TECH FLEET APPRENTICESHIP</span>
+          </div>
+
+          <h3 class="cs-title">Taíno Language Learning &amp; Gamified Retention</h3>
+          <div class="cs-subtitle">Designing Accessible Learning Loops for Endangered Cultural Language Acquisition</div>
+
+          <p class="cs-description">
+            Led research cycles to design a gamified mobile experience for learning modern Taíno. Evaluated player motivation models to replace static vocabulary lists with active speaking practice and milestone reward loops.
+          </p>
+
+          <!-- Knaflic Narrative Callout -->
+          <div class="cs-data-narrative">
+            <div class="cs-data-headline">KEY DATA INSIGHT: 72.2% Active Learning Demand</div>
+            <div class="cs-data-body">
+              72.2% of users requested active speaking challenges over passive reading. 83.0% prioritized milestone-based progression for sustained long-term motivation.
+            </div>
+          </div>
+
+          <div class="cs-actions">
+            <a href="taino-language-app.html" class="btn btn-primary btn-sm">
+              <span>Read Full Case Study</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Chart 2 -->
+        <div class="cs-visualizer-box">
+          <div class="cs-chart-header">
+            <span class="cs-chart-title">User Mode Preferences (%)</span>
+            <span class="cs-tag">Survey N=36</span>
+          </div>
+          <div class="chart-canvas-container">
+            <canvas id="taino-preference-chart"></canvas>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== RESEARCH LAB & METHODOLOGIES ==================== -->
+  <section id="research-lab" class="section">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="flask-conical"></i>
+          <span>HUMAN FACTORS RESEARCH LAB</span>
+        </div>
+        <h2 class="section-title">Methodological Rigor &amp; Technical Capabilities</h2>
+        <p class="section-desc">
+          Structured research methodologies categorised by project lifecycle stage, ensuring robust qualitative and quantitative validity.
+        </p>
+      </div>
+
+      <div class="lab-container">
+        <!-- Tab Navigation -->
+        <div class="lab-tabs">
+          <button class="lab-tab-btn active" data-tab="tab-methods">Methodology Ecosystem</button>
+          <button class="lab-tab-btn" data-tab="tab-cognitive">Cognitive Flow Model</button>
+          <button class="lab-tab-btn" data-tab="tab-tools">Tools &amp; Analytics Toolkit</button>
+        </div>
+
+        <!-- Tab 1: Methodologies -->
+        <div id="tab-methods" class="tab-pane active">
+          <div class="methodology-grid">
+            <div class="method-card">
+              <div class="method-header">
+                <i data-lucide="microscope"></i>
+                <h4 class="method-title">Discovery &amp; Generative</h4>
+              </div>
+              <div class="method-tags">
+                <span class="method-chip">User Interviews</span>
+                <span class="method-chip">Behavioral Personas</span>
+                <span class="method-chip">Task Analysis</span>
+                <span class="method-chip">Journey Mapping</span>
+                <span class="method-chip">Ethnographic Observation</span>
+              </div>
+            </div>
+
+            <div class="method-card">
+              <div class="method-header">
+                <i data-lucide="layers"></i>
+                <h4 class="method-title">Evaluative &amp; Ergonomics</h4>
+              </div>
+              <div class="method-tags">
+                <span class="method-chip">Usability Testing</span>
+                <span class="method-chip">Heuristic Evaluation</span>
+                <span class="method-chip">Playtesting Protocols</span>
+                <span class="method-chip">Accessibility (WCAG)</span>
+                <span class="method-chip">Cognitive Walkthrough</span>
+              </div>
+            </div>
+
+            <div class="method-card">
+              <div class="method-header">
+                <i data-lucide="line-chart"></i>
+                <h4 class="method-title">Quantitative &amp; Statistical</h4>
+              </div>
+              <div class="method-tags">
+                <span class="method-chip">Pearson Correlation Modeling</span>
+                <span class="method-chip">Statistical Analysis</span>
+                <span class="method-chip">Survey Instrument Design</span>
+                <span class="method-chip">Temporal Distortion Analysis</span>
+                <span class="method-chip">Mixed-Methods Triangulation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Cognitive Model -->
+        <div id="tab-cognitive" class="tab-pane">
+          <div class="cs-data-narrative" style="margin-bottom: 1.5rem;">
+            <div class="cs-data-headline">THE COGNITIVE FLOW &amp; IMMERSION FEEDBACK LOOP</div>
+            <div class="cs-data-body">
+              Interface Ergonomics (Intuitive UI, Audiovisual Cohesion, Low Friction) → Reduced Cognitive Load → Sustained Flow State &amp; Immersion → Altered Perception of Time (Temporal Distortion).
+            </div>
+          </div>
+          <div class="methodology-grid">
+            <div class="method-card">
+              <h4 class="method-title" style="color: var(--signal-green);">1. Interface Ergonomics</h4>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                Streamlined hotbars, minimal visual noise, and immediate tactile audio feedback remove extraneous cognitive friction.
+              </p>
+            </div>
+            <div class="method-card">
+              <h4 class="method-title" style="color: var(--signal-indigo);">2. Flow Facilitation</h4>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                Players enter an uninterrupted mental state where challenge perfectly matches skill level (r=0.74 correlation).
+              </p>
+            </div>
+            <div class="method-card">
+              <h4 class="method-title" style="color: var(--signal-cyan);">3. Temporal Distortion</h4>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                Subjective passage of time is altered, creating deep engagement and prolonged product session duration.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Tools -->
+        <div id="tab-tools" class="tab-pane">
+          <div class="methodology-grid">
+            <div class="method-card">
+              <div class="method-header"><i data-lucide="figma"></i><h4 class="method-title">Design &amp; Prototyping</h4></div>
+              <div class="method-tags">
+                <span class="method-chip">Figma</span>
+                <span class="method-chip">FigJam</span>
+                <span class="method-chip">Interactive Prototyping</span>
+                <span class="method-chip">Design Systems</span>
+              </div>
+            </div>
+            <div class="method-card">
+              <div class="method-header"><i data-lucide="binary"></i><h4 class="method-title">Analytics &amp; Data</h4></div>
+              <div class="method-tags">
+                <span class="method-chip">Python</span>
+                <span class="method-chip">Statistical Analysis Tools</span>
+                <span class="method-chip">SurveyMonkey</span>
+                <span class="method-chip">Google Forms</span>
+                <span class="method-chip">Excel / Quantitative Analytics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ACADEMIC CREDENTIALS & TIMELINE ==================== -->
+  <section id="timeline" class="section" style="background: var(--bg-surface);">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="award"></i>
+          <span>ACADEMIC &amp; PROFESSIONAL TRAJECTORY</span>
+        </div>
+        <h2 class="section-title">Credentials &amp; Experience</h2>
+        <p class="section-desc">
+          A continuous arc of rigorous academic study, empirical research, and human-centered clinical practice.
+        </p>
+      </div>
+
+      <div class="timeline-list">
+        <!-- Item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-year">MAY 2026</div>
+          <h3 class="timeline-title">Doctor of Philosophy (PhD) in Human Factors</h3>
+          <div class="timeline-subtitle">Capitol Technology University · Laurel, MD</div>
+          <p class="timeline-desc">
+            Finalized doctoral dissertation investigating usability features in digital sandbox environments and their empirical relationship to cognitive flow, immersion, and temporal distortion.
+          </p>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-year">2024 - 2025</div>
+          <h3 class="timeline-title">UX Research Apprentice</h3>
+          <div class="timeline-subtitle">Tech Fleet</div>
+          <p class="timeline-desc">
+            Guided end-to-end research cycles for emerging digital platforms and accessible gamified applications, conducting qualitative user interviews and evaluative usability loops.
+          </p>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="timeline-item">
+          <div class="timeline-year">GRADUATE DEGREE</div>
+          <h3 class="timeline-title">Master of Science (MS) in Psychology</h3>
+          <div class="timeline-subtitle">Graduate Focus on Behavioral &amp; Cognitive Dynamics</div>
+          <p class="timeline-desc">
+            Specialized in cognitive processing, perceptual psychology, human learning patterns, and statistical research methodologies.
+          </p>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="timeline-item">
+          <div class="timeline-year">2018 - 2020</div>
+          <h3 class="timeline-title">Mental Health Therapist</h3>
+          <div class="timeline-subtitle">Lifetime Counseling Center</div>
+          <p class="timeline-desc">
+            Conducted clinical behavioral analysis, client therapy sessions, and qualitative emotional assessment, establishing a deep foundational mastery of human empathy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EXECUTIVE CONTACT BANNER (Scraper-Proof) ==================== -->
+  <section id="contact" class="section">
+    <div class="section-container">
+      <div class="contact-banner-card">
+        <div class="section-tag" style="justify-content: center;">
+          <i data-lucide="sparkles"></i>
+          <span>LET'S CONNECT</span>
+        </div>
+        <h2 class="section-title" style="margin-bottom: 0.8rem;">Open for Strategic UX &amp; Research Roles</h2>
+        <p class="section-desc" style="max-width: 650px; margin: 0 auto;">
+          Available for Senior/Staff UX Research roles, Human Factors consulting, and Games UX strategy. Get in touch to discuss research collaborations.
+        </p>
+
+        <div class="contact-methods-wrapper">
+          <!-- Scraper-Proof Hyperlink to Email -->
+          <a href="#" class="contact-method-btn email-link">
+            <div class="contact-icon-circle"><i data-lucide="mail"></i></div>
+            <span class="email-inject">Send an Email</span>
+          </a>
+
+          <!-- LinkedIn Hyperlink -->
+          <a href="https://www.linkedin.com/in/rosemaryjravelo/" target="_blank" class="contact-method-btn">
+            <div class="contact-icon-circle"><i data-lucide="linkedin"></i></div>
+            <span>Connect on LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p class="footer-text">
+        © 2026 Rosemary J. Ravelo · PhD Human Factors &amp; UX Researcher
+      </p>
+      <p class="footer-subtext">
+        Designed with Storytelling with Data principles · Built with HTML, CSS, Three.js &amp; Chart.js
+      </p>
+    </div>
+  </footer>
+
+  <!-- Page Engine Script -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
