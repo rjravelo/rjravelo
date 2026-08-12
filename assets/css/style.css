@@ -29,8 +29,8 @@
   --text-inverse: #0F172A;
 
   /* Fonts */
-  --font-heading: 'Space Grotesk', 'Outfit', sans-serif;
-  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Shadows & Glass effects */
@@ -507,13 +507,14 @@ header.navbar {
 }
 
 .big-num {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: clamp(2rem, 3vw, 2.5rem);
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 0.75rem;
   letter-spacing: -0.02em;
   white-space: nowrap;
+  text-align: center;
 }
 
 .big-num-green { color: var(--signal-green); }
@@ -570,7 +571,7 @@ header.navbar {
 
 .duarte-author {
   margin-top: 1rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.82rem;
   color: var(--signal-green);
   font-weight: 600;
