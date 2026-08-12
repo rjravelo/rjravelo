@@ -205,11 +205,11 @@ header.navbar {
   padding: 0.5rem;
 }
 
-/* Hero Section - Centered & Uncluttered Layout */
+/* Hero Section - Centered & Product-Oriented Layout */
 .hero-section {
   position: relative;
-  min-height: 90vh;
-  padding: 9rem 2rem 5rem 2rem;
+  min-height: 85vh;
+  padding: 9rem 2rem 4rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -236,7 +236,7 @@ header.navbar {
 .hero-container {
   position: relative;
   z-index: 3;
-  max-width: 920px;
+  max-width: 960px;
   margin: 0 auto;
   width: 100%;
   display: flex;
@@ -271,14 +271,14 @@ header.navbar {
   letter-spacing: -0.03em;
   font-weight: 800;
   line-height: 1.15;
-  max-width: 860px;
+  max-width: 900px;
 }
 
 .hero-subtitle {
   font-size: 1.2rem;
   color: var(--text-secondary);
   line-height: 1.65;
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
@@ -289,6 +289,66 @@ header.navbar {
   gap: 1.25rem;
   margin-top: 0.5rem;
   flex-wrap: wrap;
+}
+
+/* Business Value Pillars Grid in Hero */
+.hero-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  width: 100%;
+  text-align: left;
+}
+
+.pillar-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-glow);
+}
+
+.pillar-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 229, 153, 0.1);
+  color: var(--signal-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.pillar-card:nth-child(2) .pillar-icon-box {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--signal-indigo);
+}
+
+.pillar-card:nth-child(3) .pillar-icon-box {
+  background: rgba(6, 182, 212, 0.1);
+  color: var(--signal-cyan);
+}
+
+.pillar-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.pillar-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
 }
 
 /* Buttons */
@@ -338,7 +398,88 @@ header.navbar {
   border-radius: var(--radius-sm);
 }
 
-/* Big Storytelling Data Grid for Detail Pages - Perfectly Aligned! */
+/* Services & Capabilities Cards Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.service-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-md);
+  background: rgba(0, 229, 153, 0.1);
+  color: var(--signal-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.service-card:nth-child(2) .service-icon-box {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--signal-indigo);
+}
+
+.service-card:nth-child(3) .service-icon-box {
+  background: rgba(6, 182, 212, 0.1);
+  color: var(--signal-cyan);
+}
+
+.service-title {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.service-deliverables {
+  list-style: none;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1.25rem;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.service-deliverable-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.service-deliverable-item i {
+  color: var(--signal-green);
+  font-size: 1rem;
+}
+
+/* Big Storytelling Data Grid for Detail Pages */
 .big-data-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -372,7 +513,7 @@ header.navbar {
   line-height: 1.1;
   margin-bottom: 0.75rem;
   letter-spacing: -0.02em;
-  white-space: nowrap; /* Prevents r = 0.74 from splitting onto two lines */
+  white-space: nowrap;
 }
 
 .big-num-green { color: var(--signal-green); }
@@ -385,7 +526,7 @@ header.navbar {
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
-  min-height: 2.5rem; /* Ensures equal vertical baseline for descriptions */
+  min-height: 2.5rem;
   display: flex;
   align-items: center;
 }
@@ -450,7 +591,7 @@ header.navbar {
 
 .section-header {
   margin-bottom: 3.5rem;
-  max-width: 750px;
+  max-width: 780px;
 }
 
 .section-tag {
@@ -1109,6 +1250,9 @@ footer.site-footer {
 @media (max-width: 1024px) {
   .hero-container {
     max-width: 100%;
+  }
+  .hero-pillars-grid {
+    grid-template-columns: 1fr;
   }
   .bio-grid {
     grid-template-columns: 1fr;
